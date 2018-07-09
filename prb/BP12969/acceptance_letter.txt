@@ -1,0 +1,80 @@
+From prb@aps.org Wed Jun  1 10:14:37 2016
+Date: Wed, 1 Jun 2016 10:53:00 -0400
+From: prb@aps.org
+To: bms@cio.mx
+Subject: {Spam?} Acceptance BP12969 Anderson
+
+Re: BP12969
+    Improved ab initio calculation of surface second-harmonic generation
+    from Si(111)(1 times 1):H
+    by Sean M. Anderson, Nicolas Tancogne-Dejean, Bernardo S. Mendoza, et
+    al.
+
+Dear Dr. Mendoza,
+
+We are pleased to inform you that your manuscript has been accepted for
+publication as a Regular Article in Physical Review B.  We would also
+like to bring the appended referee comments to your attention.
+
+Your manuscript will now be prepared for the production process.  If
+any issues arise we will contact you; otherwise your manuscript will
+be forwarded directly to our production department.  Please do not send
+a revised manuscript or figures at this time unless requested.
+
+Yours sincerely,
+
+Athanasios Chantis
+Associate Editor
+Physical Review B
+Email: prb@aps.org
+http://journals.aps.org/prb/
+
+Editorial: Highlighting Impact and the Impact of Highlighting
+http://journals.aps.org/prb/edannounce/PhysRevB.92.210001
+
+
+PUBLICITY AND OUTREACH:
+
+Authors of accepted papers are encouraged to submit a summary that clarifies
+the new elements of the work and their expected impact. These summaries help
+APS editors consider papers for coverage in the following venues:
+	
+- Physics (http://physics.aps.org): Daily online-only news and commentary about
+  a selection of papers from the APS journal collection.
+
+- Media tip sheets: News briefs distributed to credentialed journalists about
+  forthcoming papers. 
+
+- Editors' Suggestions: Papers that are judged to be particularly important,
+  interesting, or well written are highlighted and prominently displayed on our
+  journal websites. 
+
+Summaries may also be distributed to other (non-APS) media outlets.
+
+Guidelines for writing a publicity and outreach summary and how to submit it
+can be found here:
+http://journals.aps.org/authors/publicity-outreach-instructions-authors
+
+COVERAGE BY YOUR NEWS OFFICE: 
+
+Please inform your institution's public-information or news office as soon as
+possible about this acceptance. This office may publish newsletters and reports
+describing the institution's research or it may keep lists of papers published
+in major journals.  In some cases the writers may want to publicize your work
+with the local media, and they need as much lead time as possible.  To find the
+appropriate office, try searching for your institution's name at
+http://sciencesources.eurekalert.org or http://www.newswise.com/resources/ncd/.
+
+----------------------------------------------------------------------
+Second Report of the First Referee -- BP12969/Anderson
+----------------------------------------------------------------------
+
+The revised manuscript has considered fairly all of the comments of 
+the two referees, and implemented most of the suggested changes (as 
+well as extra useful clarifications). The main request of Referee 2 
+(the SSHG yield derivation) is now available on arXiv. I still think 
+it is a pity that they chose not to show, or at least describe, the 
+results (for 3-layer and 2-layer-bulk) for the Si(001)-(2x1) surface 
+that they have carried out in response to my (Referee 1) comment, but 
+I accept their motivations and will not insist on it. I recommend 
+publication as is.

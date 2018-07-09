@@ -1,0 +1,193 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath}
+\usepackage{fullpage}
+\usepackage{framed}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage[backref,colorlinks,linkcolor=blue,citecolor=blue]{hyperref}
+\usepackage{parskip}
+
+\definecolor{shadecolor}{rgb}{0.757, 0.882, 0.925}
+
+\begin{document}
+
+Dr. Athanasios Chantis\hfill{\today}\\
+Assistant Editor\\
+Physical Review B
+
+Dear Dr. Athanasios Chantis,\\
+
+Please find here enclosed the revised version of the manuscript
+BU12998/Anderson.
+
+We thank the referees for their positive and useful comments and suggestions of
+our manuscript and we believe that they have helped us to improve the quality of
+our work.
+
+In the following, we answer all the points raised by the referees and we also
+list all the changes made in the paper. In the \verb=pdf= version we have marked
+changes in red for easy reference. Below, our responses are enclosed in blue
+boxes.
+
+Additionally, in Fig. 7 we changed the curve labels in the key to italic letters
+to maintain the same the notation used in the manuscript. This is purely a
+cosmetic change that in no way affects the results depicted in the figure.
+
+We are confident that all suggestions have been met, and hope that our
+manuscript can now be published in Physical Review B.
+
+
+\section{Report of the First Referee -- BU12998/Anderson}
+
+The manuscript of Anderson and Mendoza is a comprehensive work devoted to the ab
+initio calculation of the second harmonic generation from the silicon surfaces.
+The incorporation of the multiple reflections of the fundamental and the second
+harmonic fields is its distinctive feature. SHG susceptibility tensor is taken
+as an input from the band structure calculations performed using the supercell
+approach. In general, the work is well written, the results are sound and they
+indeed show a substantial improvement over the calculations where multiple
+reflections were not taken into account. However, we should not forget that the
+theory is rather cumbersome, and some polishing of notations is needed.
+Therefore, I recommend the publication with a minor revision.
+
+Following points need to be addressed: 
+
+\begin{enumerate}
+
+\item
+Clear statement about the position of this work within already published
+results. In particular, I feel that authors contradict themselves when
+emphasizing the novelty and necessity of incorporation of multiple reflections
+and, at the same time, mentioning that ref. 18 (published already in 1962) ``was
+the first to develop a model to describe the second-harmonic (SH) radiation that
+considers the influence of multiple reflections in the reflected SH field''.
+\begin{shaded}
+We have refined that particular sentence (page 1, second paragraph) to more
+accurately represent the work of Ref. 18, and added a sentence at the top of
+page 2 to situate our work in this context.
+\end{shaded}
+
+\item
+Eqs. (46), (56), are perhaps written in the shortest possible form. However, it
+does not provide any physical insight. As an alternative consider a matrix form
+of these (or similar) equations such as Eq. (3) of T. Andersen and W. H\"ubner,
+PRB 65, 174409 (2002).
+\begin{shaded}
+We have implemented this excellent suggestion for the main expressions of
+$r_{iF}$, and they are much easier to interpret. We also added matrix
+representations for each surface symmetry ($\boldsymbol{\chi}^{(111)}$,
+$\boldsymbol{\chi}^{(110)}$, and $\boldsymbol{\chi}^{(001)}$), which leads to a
+much more visual and straightforward derivation of the results. See pages 7, 8,
+and 9 for these changes.
+\end{shaded}
+
+\item
+Another interesting aspect of this study that is worth mentioning is the total
+internal reflection for the second harmonic light and corresponding
+Goos-H\"anchen shift. Such possibility was discussed by Bloembergen and Pershan
+(Ref. 18), recently the Goos-H\"anchen shift was predicted for SH signal (Optics
+Express 21, 10878 (2013)) and observed experimentally (Sci. Rep. 6:19319
+(2016)). However, no first principles calculations are available.
+\begin{shaded}
+We have added a note at the end of the second paragraph of page 1 concerning the
+Goos-H\"anchen effect, with appropriate references.
+\end{shaded}
+
+\item
+Finally, I have a conceptual question: If we compute the SHG susceptibility
+tensor fully ab initio by taking all the geometry effects (i.e. presence of 3
+layers) into account via the supercell approach should not it already
+incorporate all the light scattering effects? After all, chi is computed for the
+composite 3 layers system and not for a free standing central layer, cf.
+statement in the introduction ``To mimic the semiinfinite system, we construct a
+supercell consisting of a finite slab of material plus a vacuum region''. New J.
+Phys. 14 (2012) 093044 is a demonstration of such an interplay between the
+quantum-mechanical and optical approach to the second harmonic generation.
+\begin{shaded}
+Indeed, if such an approach can be followed for a semiconductor we agree that
+all the light scattering effects would be incorporated. However, such an
+approach is not what we used here as we have split the solution into two steps.
+First, we calculate $\chi^{\mathrm{abc}}$ following quantum mechanical time
+dependent perturbation theory; secondly, we use the $\chi^{\mathrm{abc}}$
+components to calculate the radiated SH field and the SSHG yield. What the
+referee suggests is a rather complicated problem, since it also includes the
+self-consistent calculation of the electric field and the local field effects at
+the same time that one obtains the linear and the non-linear response. This is a
+problem of great interest and worth pursuing, but out of the scope of our
+manuscript.
+
+The article referred by the referee deals with a metallic system, and as claimed
+by the authors in page 12, ``We do not pursue here a fully atomistic approach,
+but rather solve the radial Kohn-Sham equation (using the renormalized Numerov
+method) in the presence of the spherically symmetric ionic density.'' As a
+consequence, their method does not produce a tensor for the nonlinear
+susceptibility; rather, it produces what they call on page 9 ``The $\ell$-pole
+frequency-dependent polarizability,'' $\alpha_{\ell  m}(\omega)$ (a scalar
+quantity), which they calculate for the linear and the nonlinear
+response of a metallic Na$^{-}_{2869}$ cluster, and no SHG yield is reported.
+Based on this, we do not cite this article since it concerns a different
+problem from the one treated in our manuscript.
+\end{shaded}
+
+\end{enumerate}
+
+
+\section{Report of the Second Referee -- BU12998/Anderson}
+
+The manuscript is well written and has the detailed theoretical analysis of
+surface second harmonic generation (SSHG) yield from the surface of a
+centrosymmetric material. The authors propose a three-layer model and have
+derived the complete expressions to calculate the SSHG yield taking into account
+the effects of multiple reflections inside the material from both the second
+harmonic and fundamental fields.
+
+They have used their new expressions (derived in detail) in the manuscript to
+successfully explain the past experimental observations. According to the
+authors, this work is an upgrade to the previously published article (reference
+21) and now captures the effect of multiple reflections from the surfaces.
+However, the authors do not present any case where the importance of this
+improvement can be seen. It would be of help to bring out the importance of this
+work by at least showing something new that this model is now able to predict.
+This manuscript appears a good theoretical development to me but seems to lack
+the impact.
+\begin{shaded}
+In this manuscript, we present a treatment that considers multiple reflections
+in our theory of SSHG, we fully derive the expressions, and then we apply them
+to two Si surfaces. We consider that these two surfaces showcase the features
+that the developed theory is now able to explain and predict.
+
+On the one hand, we consider the Si(111)(1$\times$1):H surface. We have
+experimental spectra that were taken over a wide range of energies and in
+absolute units. We show, through Figs. 3, 4, and 5, that including the effects
+of multiple reflections improves the similarity between theory and experiment.
+In agreement with the referee's suggestion, to further present how this is an
+upgrade over our previous results, we add Tables II and III (see pages 10 and 11
+with the corresponding text) that compare the yield ratio between the values of
+the $E_{2}$ and $E_{1}$ peaks for $\mathcal{R}_{pP}$ and $\mathcal{R}_{pS}$. We
+consider that these tables clearly show how the proportional height of the
+theoretical peaks is closest to experiment when including the effects of
+multiple reflections. This validates the physics behind our model for SSHG and
+demonstrates what this model is now able to predict. As we are interested in
+developing and implementing the most complete theory for SSHG, we think that
+this is a step in the right direction.
+
+On the other hand, we also present predictive calculations for the
+Si(001)(2$\times$1) surface. The robust theoretical framework developed in the
+manuscript can easily account for surfaces like these that lack any symmetry
+considerations. We present ``heatmap'' plots that can guide the interested
+experimenter, and demonstrate how the SH spectra of this surface is entirely
+dominated by the topmost dimer layer. Although we do not have experimental data
+to compare with, we consider these results to be quite interesting in their own
+right, and should motivate their experimental verification.
+\end{shaded}
+
+Also the section numbers at the end of each reference should be removed.
+\begin{shaded}
+We have removed the section numbers from the end of each reference.
+\end{shaded}
+
+Overall I feel that the manuscript in its current form does not meet PRB's
+criteria. The authors should revise the manuscript to clearly bring out the
+significant impact of this theoretical work.
+
+\end{document}

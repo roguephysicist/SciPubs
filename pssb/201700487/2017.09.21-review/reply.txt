@@ -1,0 +1,72 @@
+We thank the referees for their timely and useful suggestions. The responses to
+each comment are included below, and the relevant changes are marked in red in
+the manuscript PDF file.
+
+We hope that our paper will be fit for acceptance into the journal after this
+revision.
+
+Reviewer #1
+-----------
+
+C1. When the authors mention moving the z-coordinate "for each individual
+atom"/"only a single atom that is perturbed" they actually mean a complete
+atomic layer, as the slab is periodic in the xy direction. As written, it seems
+like a local defect.
+
+Response: We are in total agreement. To clarify this point, we have added a
+sentence to the second paragraph of page 1, modified the caption of Fig. 1 on
+page 3, and modified a sentence in paragraph 3 of page 3.
+
+
+C2. The authors have previously described techniques for layer-by-layer analysis
+of optical reflectance (Ref 4). Can they apply this to provide a real space
+picture of the strain wave?
+
+Response: Yes, this is possible. However, we decided to omit this from the
+current work since we have plans to include a layer-by-layer analysis in a
+future manuscript featuring a more in-depth theoretical treatment of CAP.
+Nevertheless, we have added a small comment in the Conclusions pertaining to
+this.
+
+
+C3. What are the limitations of the approach, is it limited to high index
+surfaces only?
+
+Response: Other than those inherent within the independent-particle DFT LDA
+approach, we foresee no other limitations for our model.
+
+
+C4. I suggest rewriting "Many-body interactions can be included using the
+scissors approximation" along the lines of "Many-body interactions can be
+included in an approximate manner using a scissors operator approach".
+
+Response: We agree that your proposed phrasing is clearer, and have changed the
+relevant sentence (on page 2) accordingly.
+
+
+C5. Page 4, paragraph "We propose..." seems to suggest that compressed bonds
+lead to a lower absolute reflectance. I understand from their results that the
+reflectance always increases for any perturbation, and thus the authors mean a
+smaller increase in reflectance (with respect to the elongated bonds)
+
+Response: We are in total agreement, and have amended the last line of paragraph
+4 on page 4 to indicate that we are indeed only talking about an increase in
+reflectance.
+
+
+C6. Acknowledgements: Should N. Talk be N. Tolk?
+
+Response: Correct, thank you for pointing that out. We have amended the typo.
+
+
+
+Reviewer #2
+-----------
+
+C1. A scissor shift has been used in the calculation. Different values have been
+used for the supercell structure and for the bulk system. An explanation for
+this choice should be given, together with some references.
+
+Response: Thank you for your comment. We have added some text at the end of the
+first paragraph of the 'Results' section on page 3 to clarify our choice of
+scissors shift values.

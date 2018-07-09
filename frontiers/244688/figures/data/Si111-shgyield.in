@@ -1,0 +1,33 @@
+# MonoH_MonoH_1x1_111 input file for calculating reflectance
+mode: 3-layer
+theta: 65
+phi: 30
+# chi1 normalization and broadening
+norm: 1.2659296143
+sigma: 0.075
+# Multiple reflections (values in nanometers)
+multiref: yes
+thickness: 3.68698559
+depth: average
+# Components
+chib: res/chi1.sm_0.075_xx_yy_zz_3107_25-nospin_scissor_0.70_Nc_26
+chil: res/calChi1.sm_0.075_xx_yy_zz_576_half-slab_12-nospin_scissor_0.70_Nc_103
+xxx: res/shgC.sm_0.075_xxx_576_half-slab_12-nospin_scissor_0.70_Nc_103
+xxy: res/shgC.sm_0.075_xxy_576_half-slab_12-nospin_scissor_0.70_Nc_103
+xxz: res/shgC.sm_0.075_xxz_576_half-slab_12-nospin_scissor_0.70_Nc_103
+xyy: res/shgC.sm_0.075_xyy_576_half-slab_12-nospin_scissor_0.70_Nc_103
+xyz: res/shgC.sm_0.075_xyz_576_half-slab_12-nospin_scissor_0.70_Nc_103
+xzz: res/shgC.sm_0.075_xzz_576_half-slab_12-nospin_scissor_0.70_Nc_103
+yxx: res/shgC.sm_0.075_yxx_576_half-slab_12-nospin_scissor_0.70_Nc_103
+yxz: res/shgC.sm_0.075_yxz_576_half-slab_12-nospin_scissor_0.70_Nc_103
+yyx: res/shgC.sm_0.075_yyx_576_half-slab_12-nospin_scissor_0.70_Nc_103
+yyy: res/shgC.sm_0.075_yyy_576_half-slab_12-nospin_scissor_0.70_Nc_103
+yyz: res/shgC.sm_0.075_yyz_576_half-slab_12-nospin_scissor_0.70_Nc_103
+yzz: res/shgC.sm_0.075_yzz_576_half-slab_12-nospin_scissor_0.70_Nc_103
+zxx: res/shgC.sm_0.075_zxx_576_half-slab_12-nospin_scissor_0.70_Nc_103
+zxy: res/shgC.sm_0.075_zxy_576_half-slab_12-nospin_scissor_0.70_Nc_103
+zxz: res/shgC.sm_0.075_zxz_576_half-slab_12-nospin_scissor_0.70_Nc_103
+zyy: res/shgC.sm_0.075_zyy_576_half-slab_12-nospin_scissor_0.70_Nc_103
+zzy: res/shgC.sm_0.075_zzy_576_half-slab_12-nospin_scissor_0.70_Nc_103
+zzz: res/shgC.sm_0.075_zzz_576_half-slab_12-nospin_scissor_0.70_Nc_103
+output: original-novnl-3.6.dat

@@ -1,0 +1,31 @@
+Ab initio calculation of the depth-dependent optical reflectance from layer-by-layer atomic disorder
+
+We present a simple model to study the effects of displacing a single atomic monolayer on the linear optical properties of a material. As an example, we calculate the change in reflectance of a Si(111)(1x1):H slab after disordering successively deeper atomic layers. We find that the reflectance varies significantly at photon energies above 2.0 eV, and that the disordered slab produces a larger reflectance than the relaxed slab. The results also show a quantitative difference in the contribution from the odd and even atomic layers to the calculated reflectance. This simplified model is a first approach, and can be extended to consider more realistic systems that can be probed by techniques such as coherent acoustic phonon (CAP) spectroscopy, and can also be applied to two-dimensional materials.
+
+reflectance spectroscopy; atomic disorder; CAP; surface; strain
+
+## Referees
+
+Conor Hogan
+Universita degli Studi di Roma Tor Vergata
+conor.hogan@roma2.infn.it
+
+Maurizia Palumo
+Universita degli Studi di Roma Tor Vergata
+maurizia.palummo@roma2.infn.it
+
+Gero Schimdt
+Universitat Paderborn
+w.g.schmidt@upb.de
+
+Friedhelm Bechstedt
+Friedrich-Schiller-Universitat Jena
+friedhelm.bechstedt@uni-jena.de
+
+Giovanni Onida
+Universita degli Studi di Milano
+giovanni.onida@fisica.unimi.it 
+
+Charles Patterson
+University of Dublin Trinity College
+cpttrson@tcd.ie

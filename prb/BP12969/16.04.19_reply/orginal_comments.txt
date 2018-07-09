@@ -1,0 +1,155 @@
+Date: Tue, 19 Apr 2016 11:27:55 -0400
+Subject: Your_manuscript BP12969 Anderson
+
+----------------------------------------------------------------------
+Report of the First Referee -- BP12969/Anderson
+----------------------------------------------------------------------
+
+Anderson and colleagues present a follow up to their PRB 2015 paper
+[Ref. 19] which described a theoretical framework that allows
+quantitative calculation of surface second harmonic generation at the
+independent particle level. The main concepts treated in that work -
+scissors shift, nonlocal terms in the matrix elements, and a slab cut
+function, within a single formulation - are demonstrated here by means
+of ab initio calculations on Si(111)-(1x1):H and compared with various
+experimental data. In addition, the authors report on other technical
+aspects such as three vs two layer models and sensitivity to atomic
+geometry. The text is very well written and easy to read. The theory
+section repeats only the essential formulae of Ref 19, but otherwise
+reports no new theoretical development beyond what is reported in e.g.
+Refs 19 and 24-27. The calculations and conclusions deserve
+publication in some form, since practical SSHG calculations beyond the
+IP level remain out of reach for most systems and researchers in the
+near future, but I consider it a borderline work for PRB. In the
+following, I raise some issues that should nonetheless be addressed.
+
+1. One interesting demonstration in Ref. 19 was the sensitivity of
+computed spectra (both lineshape and energy) to the chosen value of
+the scissors shift. There, the authors used 0.5 and 0.63 eV for clean
+Si(100)-(2x1), but here they use 0.7 eV for Si(111)-(1x1):H as taken
+from a published GW calculation. Since the authors neglect
+temperature, local field, and excitonic effects, this choice is
+somewhat arbitrary. However, they cannot claim such good agreement
+with experiment unless they show such a comparison again here (at
+least for one dataset). The authors should also comment on why GW
+eigenvalues/transition energies are appropriate here, when in linear
+optics the GW+BSE transition energies are needed.
+
+2. Related to this, I find that the authors overinterpret their
+results and frequently overstate the agreement with experiment. For
+instance:
+
+- Page 5: "relaxed coordinates have an improved peak position". Can
+the authors really claim that agreement is improved, in light of the
+IP approximation used?
+
+- The authors on Page 6 refer to Ref. 46, Dadap PRB 1996 for "It is
+well known that temperature causes shifting in the peak position of
+SHG spectra". That work does not discuss temperature. I believe the
+authors intended to refer to Dadap PRB 56 13367 (1997), which shows
+several spectra redshifting with higher T. Hence "Low temperature
+measurements for the SHG yield will lead to more closely matched
+results" does not seem to be correct - quite the opposite.
+
+- Page 6: "the three layer model best reproduces both the lineshape
+and intensity" is again somewhat generous, since the bulk/2L spectra
+have near identical lineshapes ("mostly consistent", as written on
+page 7). Such a conclusion might be valid after Fig. 7.
+
+- Page 7: "inclusion of .. nonlocal part .. gives much better
+comparison". Again, the evidence for this is tiny. I do not doubt that
+the inclusion is formally correct, and perhaps for some other
+material/pseudopotential essential, but the results presented here do
+not justify such a strong conclusion. Furthermore, this point was
+already well demonstrated in Ref. 19.
+
+- The few speculative remarks on temperature and oxidation effects on
+experimental SSHG spectra does not justify "Our comparisons also
+indicate the effects of temperature and surface adsorption" in the
+abstract, although they are acceptable in the text.
+
+3. In all cases shown, the bulk model yields near identical lineshapes
+and seems just as good as the 3L model except for a constant
+underscaling of about 5. I suspect this is because the authors chose a
+passivated surface with no surface states, so that all features appear
+around E1 and E2. If the authors repeated such a comparison using the
+Si(100)-(2x1) surface (used in Ref 19) they might demonstrate a
+clearer difference between 3L and bulk. I think such a comparison is
+most important here, even in the absence of experimental data.
+Secondly: do the authors' calculations on Si(111)-(1x1):H demonstrate
+that surface SHG, for a system without surface states, can be well
+modeled simply from a bulk calculation (plus scaling of about ~5) and
+use of the appropriate formulae? This seems to be a useful result in
+itself.
+
+4. Two broadenings are chosen. These also affect the intensities, of
+course. The authors should justify their usage and value (a priori?)
+
+5. The authors renormalize the surface dielectric function to the
+volume of the slab, not the supercell. On page three, they describe
+the slab as containing "front, back, subsurface regions...and between
+these, a bulk region". Would it not be more precise, therefore, to
+renormalize to the volume of the surface region? Or the half slab?
+This point is not clear.
+
+6. Page 8, "but with four times less intensity" should read "but with
+eight times less intensity."
+
+7. The temperature used in the experiments should be noted in each
+figure caption (or on the figure), and not only in the text.
+
+8. On page 8, local fields are mentioned as possibly being important
+for the out of plane components. A sentence expanding on this (what
+local fields are and why they are more important perpendicular to the
+surface) would help a non expert.
+
+----------------------------------------------------------------------
+Report of the Second Referee -- BP12969/Anderson
+----------------------------------------------------------------------
+
+In this paper an ab initio calculation of surface second-harmonic
+generation of Si(111)(1x1):H surface has been carried out using the
+ABINIT pseudopotential code for the ground state calculation and the
+DP code for the calculation of the nonlinear part of the
+pseudopotential to the nonlinear susceptibility. Like in their
+previous paper (see Ref. 19), they used the independent particle
+approximation to include the scissors correction, the contribution of
+the nonlocal part of the pseudopotentials, and a cut function to
+extract the surface response to the calculation of the nonlinear
+susceptibility tensor and the surface second-harmonic generation
+(SSHG) yield. This work is therefore a continuation of their previous
+work published in Phys. Rev. B 91, 075302. In this work they used
+their previous results of the nonlinear susceptibility to calculate
+the SSHG yield of Si(111)(1x1):H surface and compare the results with
+various experiments. The scissors operator used seems to make their
+calculation in fair agreement with experiments. However, it is
+unfortunate that the details of their derivations of the SSHG yield
+are put in a paper (Ref. 34), which is submitted, but the information
+about the journal is missing. I suppose this is a mistake. I advise
+the authors either to put this paper in arXiv.org or to put the
+derivation in an appendix or supplementary information. This will be
+helpful to the specialized reader. He (she) will be able to fully
+derive their formulas, especially when their previous publication of
+the SSHG yield (PRB 66, 195329) seems to be incorrect due to errors in
+their previous formulas. The authors should also cite properly the
+work of Z.H. Levine, published in PRB, who was among the first to
+include the scissors correction and the contribution of the nonlocal
+part of the pseudopotentials to the calculation of the nonlinear
+susceptibility.
+
+In conclusion, this is an interesting work, which gives a full
+calculation of the SSHG yield within the independent particle
+approximation. Unfortunately in its present state the paper is not
+ready for publication in PRB (see above).
+
+Minor points:
+
+The authors should not repeat formulas which where already published
+in their previous paper (Ref. 19), like equations 6a-d and many
+others. Instead they should give more details about the derivation of
+Eq. 2 and cite their previous paper whenever needed.
+
+At the end of page 2, it is written that T^a,b _i = t ^a,b _i . Is
+this a mistake?
+
+Change all dk^3 to d^3k.

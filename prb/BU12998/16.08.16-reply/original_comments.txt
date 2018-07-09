@@ -1,0 +1,84 @@
+Date: Thu, 18 Aug 2016 14:11:18 -0400 
+Subject: Your_manuscript BU12998 Anderson 
+
+---------------------------------------------------------------------- 
+Report of the First Referee -- BU12998/Anderson 
+---------------------------------------------------------------------- 
+
+The manuscript of Anderson and Mendoza is a comprehensive work devoted 
+to the ab initio calculation of the second harmonic generation from 
+the silicon surfaces. The incorporation of the multiple reflections of 
+the fundamental and the second harmonic fields is its distinctive 
+feature. SHG susceptibility tensor is taken as an input from the band 
+structure calculations performed using the supercell approach. In 
+general, the work is well written, the results are sound and they 
+indeed show a substantial improvement over the calculations where 
+multiple reflections were not taken into account. However, we should 
+not forget that the theory is rather cumbersome, and some polishing of 
+notations is needed. Therefore, I recommend the publication with a 
+minor revision. 
+
+Following points need to be addressed: 
+
+1) Clear statement about the position of this work within already 
+published results. In particular, I feel that authors contradict 
+themselves when emphasizing the novelty and necessity of incorporation 
+of multiple reflections and, at the same time, mentioning that ref. 18 
+(published already in 1962) "was the first to develop a model to 
+describe the second-harmonic (SH) radiation that considers the 
+influence of multiple reflections in the reflected SH field". 
+
+2) Eqs. (46), (56), are perhaps written in the shortest possible form. 
+However, it does not provide any physical insight. As an alternative 
+consider a matrix form of these (or similar) equations such as Eq. (3) 
+of T. Andersen and W. Hübner, PRB 65, 174409 (2002). 
+
+3) Another interesting aspect of this study that is worth mentioning 
+is the total internal reflection for the second harmonic light and 
+corresponding Goos-Hänchen shift. Such possibility was discussed by 
+Bloembergen and Pershan (Ref. 18), recently the Goos-Hänchen shift was 
+predicted for SH signal (Optics Express 21, 10878 (2013)) and observed 
+experimentally (Sci. Rep. 6:19319 (2016)). However, no first 
+principles calculations are available. 
+
+4) Finally, I have a conceptual question: If we compute the SHG 
+susceptibility tensor fully ab initio by taking all the geometry 
+effects (i.e. presence of 3 layers) into account via the supercell 
+approach should not it already incorporate all the light scattering 
+effects? After all, chi is computed for the composite 3 layers system 
+and not for a free standing central layer, cf. statement in the 
+introduction "To mimic the semiinfinite system, we construct a 
+supercell consisting of a finite slab of material plus a vacuum 
+region". New J. Phys. 14 (2012) 093044 is a demonstration of such an 
+interplay between the quantum-mechanical and optical approach to the 
+second harmonic generation. 
+
+---------------------------------------------------------------------- 
+Report of the Second Referee -- BU12998/Anderson 
+---------------------------------------------------------------------- 
+
+The manuscript is well written and has the detailed theoretical 
+analysis of surface second harmonic generation (SSHG) yield from the 
+surface of a centrosymmetric material. The authors propose a 
+three-layer model and have derived the complete expressions to 
+calculate the SSHG yield taking into account the effects of multiple 
+reflections inside the material from both the second harmonic and 
+fundamental fields. 
+
+They have used their new expressions (derived in detail) in the 
+manuscript to successfully explain the past experimental observations. 
+According to the authors, this work is an upgrade to the previously 
+published article (reference 21) and now captures the effect of 
+multiple reflections from the surfaces. However, the authors do not 
+present any case where the importance of this improvement can be seen. 
+It would be of help to bring out the importance of this work by at 
+least showing something new that this model is now able to predict. 
+This manuscript appears a good theoretical development to me but seems 
+to lack the impact. 
+
+Also the section numbers at the end of each reference should be 
+removed. 
+
+Overall I feel that the manuscript in its current form does not meet 
+PRB's criteria. The authors should revise the manuscript to clearly 
+bring out the significant impact of this theoretical work.

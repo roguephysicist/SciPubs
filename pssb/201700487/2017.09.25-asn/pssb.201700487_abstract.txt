@@ -1,0 +1,55 @@
+The characterization and profiling of inhomogeneities in solid state materials
+has become increasingly important for the development of new and improved
+optoelectronic devices and technologies. There is great interest in determining
+the effects of defects or impurities on the local optical properties of the host
+materials. Optical probing techniques are non-invasive and usually work in-situ,
+which positions them as promising tools in this field of study. Amongst these
+techniques, coherent acoustic phonon (CAP) spectroscopy is particularly well
+suited for the task.
+
+CAP spectroscopy is an acousto-optical, pump-probe technique that involves an
+ultrafast, high-intensity pump pulse impinging on an absorbing material, and a
+second probe pulse that senses changes in the optical properties of the material
+that are induced by the pump pulse. The pump pulse is absorbed at the surface,
+establishing a transient strain wave at the sample surface that traverses the
+material as a longitudinal acoustic phonon. This CAP wave acts as a localized
+strained layer that moves down into the material at the material-specific phonon
+velocity. It modifies the local dielectric constants, creates discontinuities,
+and causes a periodic modulation of the optical properties. The CAP wave
+effectively samples different layers as it travels through the material, which
+allows it to probe optical properties as a function of depth and across material
+interfaces, while remaining sensitive to lattice deformation and
+inhomogeneities.
+
+Of course, it is necessary to couple these experimental studies with the
+necessary theoretical framework to support the observations. In a recent article
+in physica status solidi (b), Sean M. Anderson, Bernardo S. Mendoza, and Ramón
+Carriles have developed a simple ab initio model to study the effects of atomic
+disordering in a sample Silicon surface-bulk system. These ab initio
+calculations can yield frequency-dependent optical functions that take into
+account any lattice disorder, strain, inhomogeneities or defects that may be
+present, while remaining computationally efficient and producing accurate
+results. This enables an in-depth profiling of the interactions between
+structural characteristics and the local optoelectronic properties of a given
+material. In their model, they move the z-coordinate for each atomic monolayer,
+one at a time, away from the equilibrium position in small, uniform
+translations, starting from the surface layer down into the bulk. The linear
+optical response function is then calculated for the entire structure, taking
+into account the newly disordered atomic positions.
+
+Their model could help in the understanding of the experiments based on
+techniques such as CAP, and they have developed it accordingly to feature the
+basic characteristics of these types of experiments. For instance, the authors
+consider inter-atomic displacements of the same order as those induced in real
+samples during a CAP experiment. These considerations result in calculated
+reflectivity changes that are within the detection sensitivity range accessible
+with lock-in techniques. The authors conclude that their model manages to yield
+relevant insight about strain waves in surface-bulk systems, and helps elucidate
+the physical phenomena dictating the observed changes in reflectance.
+
+
+Figure caption:
+Detectable changes in the reflectance of a crystalline Silicon surface can be
+induced by moving single atomic monolayers away from their equilibrium
+positions. The elongation and compression of the diagonal bonds are responsible
+for the changes in the overall reflectance.

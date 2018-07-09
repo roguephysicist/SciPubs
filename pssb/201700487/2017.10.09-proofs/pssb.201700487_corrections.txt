@@ -1,0 +1,24 @@
+Proof Queries
+
+Q1. The author names and surnames have been identified and spelled correctly.
+Q2. The TOC text is as follows:
+
+"This work studies the effect of displacing a single atomic monolayer on the linear optical properties of a material. The reflectance is calculated for a Si(111)(1x1):H slab after disordering individual atomic layers (see figure). This slab produces a larger reflectance than the unperturbed slab, and there are quantitative differences between the contribution from the even/odd layers."
+
+The included 'pssb.201700487_toc.tiff' file contains the TOC image.
+
+Q3. All equations have been typeset correctly.
+Q4. The page number for the aforementioned references are as follows:
+
+Ref. [13]: 166106
+Ref. [14]: 100301
+Ref. [16]: 095501
+Ref. [17]: 113313
+Ref. [20]: 245207
+Ref. [23]: 132503
+Ref. [24]: 094303
+Ref. [31]: 016804
+Ref. [32]: 115208
+Ref. [34]: 174112
+
+Q5. The aforementioned references have been properly formatted.

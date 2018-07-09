@@ -1,0 +1,178 @@
+Dear Dr. Mendoza,
+
+Thank you for submitting your manuscript "Ab initio calculation of the
+depth-dependent optical reflectance from layer-by-layer atomic disorder" to
+Physica Status Solidi B: Basic Solid State Physics.
+
+You will be pleased to know that your manuscript has been reviewed and
+recommended for publication pending satisfactory revisions. The reviewer
+comments are attached below.
+
+I invite you to respond to the reviewer comments and make the necessary
+revisions to your manuscript.
+
+To submit your revision, go to http://pssb-journal.edmgr.com/ and log in as an
+Author using your username (********) and password. Your submission can be found
+under the menu item "Submissions Needing Revision".
+
+Please note that when you submit the revised version of this manuscript, you
+will be asked to upload a zip archive containing the production data that will
+be used if your manuscript is accepted. See below for more details.
+
+When you submit your revised manuscript, please include a point-by-point
+response to the reviewer comments in the "Respond to Reviewers" box, including a
+list of changes made and a rebuttal to any comments with which you disagree. All
+changes to your manuscript should also be highlighted in the main manuscript
+file. The deadline for the submission of this revision is 04 Oct 2017.
+
+Once we receive your revised manuscript, we will provide a final decision as
+soon as possible.
+
+Yours Sincerely,
+
+Stefan Hildebrandt, Editor-in-Chief
+
+P.S. To avoid delays in the processing of your manuscript please provide a pdf
+as well as the source files (Word and separate image files if available or the
+respective LaTeX/ EPS package). For preparation guidelines see http://onlinelibr
+ary.wiley.com/journal/10.1002/(ISSN)1521-3951/homepage/2232_authors.html
+
+If your manuscript includes Supporting Information, please upload this as a
+separate file.
+
+According to the style of the journal, the Experimental section should be placed
+following the Introduction (not after the Conclusions). Please format your
+manuscript accordingly. Extensive experimental details may also be submitted as
+Supporting Information.
+
+For Review or Feature Articles, please send an eye-catching color image (4 cm x
+4 cm) and a short text (50-60 words) summarizing your article for a non-expert
+audience that could be used in the Table of Contents.
+
+-------------------------------
+REVIEWER REPORT:
+-------------------------------
+
+EVALUATION:
+
+Reviewer's Responses to Questions
+
+Please rate the importance of this submission.
+
+Reviewer #1: Should be published in this journal
+
+Reviewer #2: Should be published in this journal
+
+--------------------
+
+Please rate the originality of this submission.
+
+Reviewer #1: Acceptable level of new results
+
+Reviewer #2: Acceptable level of new results
+
+--------------------
+
+Please rate the scientific and technical content of this submission.
+
+Reviewer #1: Fully consistent and accurate
+
+Reviewer #2: Fully consistent and accurate
+
+--------------------
+
+Please rate the length of this submission.
+
+Reviewer #1: Concise and correct length
+
+Reviewer #2: Concise and correct length
+
+
+
+COMMENTS TO AUTHOR:
+
+Reviewer #1: The authors present a simple theoretical model to predict the
+change in reflectance due to local subsurface disorder (strain). By introducing
+rigid shifts of single atomic layers perpendicular to the surface planes and
+analysing the dependence on the layer depth, they predict increases in
+reflectance and relate these to compression of bonds near the surface.
+Calculations are performed using DFT with optical response at the single
+particle level. One motivation for this work is to explain the influence of
+strain waves induced by coherent acoustic phonon spectroscopy experiments. The
+paper is well written and, although it is hard to determine how useful the model
+will be to interpret real experiments, it is a good starting point and suitable
+for publication. I have some minor issues that should be resolved and/or
+commented on.
+
+1) When the authors mention moving the z-coordinate "for each individual
+   atom"/"only a single atom that is perturbed" they actually mean a complete
+   atomic layer, as the slab is periodic in the xy direction. As written, it
+   seems like a local defect.
+2) The authors have previously described techniques for layer-by-layer analysis
+   of optical reflectance (Ref 4). Can they apply this to provide a real space
+   picture of the strain wave?
+3) What are the limitations of the approach, is it limited to high index
+   surfaces only?
+4) I suggest rewriting "Many-body interactions can be included using the
+   scissors approximation" along the lines of "Many-body interactions can be
+   included in an approximate manner using a scissors operator approach".
+5) Page 4, paragraph "We propose..." seems to suggest that compressed bonds lead
+   to a lower absolute reflectance. I understand from their results that the
+   reflectance always increases for any perturbation, and thus the authors mean
+   a smaller increase in reflectance (with respect to the elongated bonds)
+6) Acknowledgements: Should N. Talk be N. Tolk?
+
+
+Reviewer #2: In this work, the authors have simulated atomic disorder, due for
+instance to a longitudinal acoustic phonon, by performing ab initio simulations
+of the reflectance anisotropy spectra for a silicon surface. Within a supercell
+approach, atoms have been moved away from their equilibrium position and
+absorption spectra have been calculated. Numerical results are presented for the
+comparison between the perturbed structure and the relaxed structure.The
+dependence in terms of the depth of the displaced atom, the size of the
+displacement or the frequency is carefully analyzed and an interpretation is
+provided, based on a simple harmonic oscillator model.
+
+
+As noted by the authors, this an very simplified approach for describing the
+real physical response of the system in a pump-probe experiment, it provides
+some general features and some useful trends for possible interpretations. I
+believe that the results presented in this paper are important. For these
+reasons, the paper could be published, essentially in its present form in
+Physica Status Solidi b.
+
+I have a question that could be addressed:
+
+A scissor shift has been used in the calculation. Different values have been
+used for the supercell structure and for the bulk system. An explanation for
+this choice should be given, together with some references.
+
+--
+Dr. Stefan Hildebrandt, Editor-in-Chief 
+
+Physica Status Solidi B: Basic Solid State Physics
+Wiley-VCH Verlag GmbH & Co. KGaA
+Rotherstrasse 21
+10245 Berlin
+Germany
+T +49 (0) 30 47 031 331
+F +49 (0) 30 47 031 334
+http://pssb-journal.de/
+
+*****
+Get all the latest news on breakthroughs in healthcare, sustainability, and
+technology, read features and opinion pieces on the key challenges faced by
+research, and watch our exciting new video abstracts at
+www.AdvancedScienceNews.com
+
+
+*****
+Wiley-VCH Verlag GmbH & Co. KGaA - A company of John Wiley & Sons, Inc. -
+Location of the Company: Weinheim - Trade Register Mannheim, HRB 432833.
+Chairman of the Supervisory Board: John Kritzmacher. General Partner: John Wiley
+& Sons GmbH, Location: Weinheim - Trade Register Mannheim, HRB 432296 - Managing
+Directors: Sabine Steinbach, Dr. Guido F. Herrmann.
+*****
+
+
+*****

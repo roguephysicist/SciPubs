@@ -1,0 +1,27 @@
+In this paper, we present the three-layer model to calculate the
+surface second harmonic generation (SSGH) yield. This model considers
+that the surface is represented by three regions or layers. The first
+layer is the vacuum region with a dielectric function equal to one
+from where the fundamental electric field impinges on the
+material. The second layer is a thin layer of thickness d
+characterized by its own dielectric function, and it is in this layer
+where the SSHG takes place. The third layer is the bulk region
+characterized by bulk dielectric function. Both the vacuum and bulk
+layers are semi-infinite. The model includes the multiple reflections
+of both the fundamental and the second-harmonic (SH) fields that take
+place at the thin layer. We present explicit expressions for the SSHG
+yield for the commonly used s and p polarizations of the incoming and
+outgoing electric fields, where no assumptions for the symmetry of the
+surface are made. These symmetry assumptions ultimately determine
+which components of the surface nonlinear second order susceptibility
+tensor are different from zero, and thus contribute to the SSHG
+yield. Then, we particularize the results for the most commonly
+investigated surfaces, the (001), (110) and (111) crystallographic
+faces, taking their symmetries into account. We use the three-layer
+model and compare it against the experimental results of a
+Si(111)(1x1):H surface, as a test case, and use it to predict the SSHG
+yield of a Si(001)(2x1) surface.  This work uses our previous
+publication (Phys.Rev.B 91, 075302 (2015)), and most of the cited
+works appear in either Physical Review Letters or Physical Review B,
+for which we think that this article would have excellent visibility
+in Physical Review B as well.

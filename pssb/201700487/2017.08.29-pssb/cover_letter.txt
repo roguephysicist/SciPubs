@@ -1,0 +1,17 @@
+Dr. Stefan Hildebrandt
+Editor-in-Chief
+physica status solidi (b)
+
+
+Dear Prof. Hildebrandt,
+
+We would like to submit a manuscript by Sean M. Anderson, Bernardo S. Mendoza, and Ramón Carriles entitled "Ab initio calculation of the depth-dependent optical reflectance from layer-by-layer atomic disorder" to be evaluated for inclusion in your journal, physica status solidi (b). This manuscript is submitted as a contribution to the Optics of Surfaces and Interfaces (OSI-XII) conference, that took place in Dublin this past July. The manuscript research paper that details our development of a simple ab initio model to study the effects on the linear optical properties of displacing a single atomic monolayer inside a crystalline semiconductor. We then apply our model to calculate the change in reflectance of a Si(111)(1x1):H slab after disordering successively deeper atomic layers. We find that the reflectance varies significantly at photon energies above 2.0\,eV, and that the disordered slab produces a larger reflectance than the relaxed slab. This simplified model is a first approach, and can be extended to consider more realistic systems that can be probed by techniques such as coherent acoustic phonon (CAP) spectroscopy. We consider that our paper would have excellent visibility in your journal and would be welcome by the OSI community, if accepted.
+
+We affirm that this manuscript is original, has not been published before and is not currently being considered for publication elsewhere.
+
+Thank you very much for considering our paper.
+
+
+Sincerely yours,
+
+Bernardo S. Mendoza
