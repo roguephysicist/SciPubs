@@ -1,0 +1,21 @@
+Dr. Laurens W. Molenkamp
+Editor
+Physical Review B
+
+
+Dear Dr. Molenkamp,
+
+We would like to submit a manuscript by Sean M. Anderson, Bernardo S. Mendoza, and Ramón Carriles entitled "Ab initio Modeling of Optical Functions after Strain Wave Perturbation for Defect Detection" to be evaluated for inclusion in your journal, Physical Review B.
+
+We model the change in the linear optical functions due to the propagation of a strain wave through a crystalline slab. Defects in the slab are introduced by arbitrarly displacing one of the atomic layers. The perturbing wave is assumed to be produced by laser light absorption; the properties of the propagating wave are explicitly related to the laser and material properties. We apply this model to a Si(111)(1x1):H slab, and find that the reflectance varies significantly at photon energies above 2.5 eV, and that the disordered slab produces significant changes in the reflectance when compared to the unperturbed slab. We then induce a defect layer in the slab by uniformly translating an atomic layer. As the strain wave passes through the material, the behavior of the calculated reflectance difference spectrum changes according to the defect layer, allowing us to discern the depth of the defect.
+
+This model allows for a realistic representation of strain waves, that can be effective at probing buried interfaces and similar defects, and will be of interest to researchers that work with techniques such as coherent acoustic phonon (CAP) spectroscopy. By far, most of the cited works appear in either Phys. Rev. Lett. or Phys. Rev. B, for which we think that this article would have excellent visibility in Physical Review B as well.
+
+We affirm that this manuscript is original, has not been published before and is not currently being considered for publication elsewhere.
+
+
+Thank you very much for considering our paper.
+
+Sincerely yours,
+
+Dr. Sean M. Anderson

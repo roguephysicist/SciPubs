@@ -1,0 +1,170 @@
+\documentclass[aps,prb,10pt,endfloats]{revtex4-1}
+\usepackage{amsmath}
+\usepackage{framed}
+\usepackage{color}
+\usepackage{parskip}
+\usepackage{graphicx}
+
+\usepackage[backref,colorlinks,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+
+\definecolor{shadecolor}{rgb}{0.757, 0.882, 0.925}
+
+\begin{document}
+
+\noindent Dr. Yan Li\hfill{\today}\\
+Associate Editor\\
+Physical Review B\\
+
+\noindent Dear Dr. Li,\\
+
+Attached is the revised version of our paper entitled \emph{Ab initio modeling
+of optical functions after strain wave perturbation for defect detection},
+manuscript BD13947/Anderson. We thank the referees for their useful comments and
+suggestions, as they have helped us to significantly improve the quality of our
+work.\\
+
+In the following, we answer all the points raised by the referees and list all
+the changes made to the paper. We have marked changes in red for easy reference
+in the revised PDF version of the manuscript. Our responses to the reviewer
+comments are enclosed in blue boxes below.\\
+
+We are confident that all suggestions have been met and consider that our
+manuscript is now acceptable for publication in Physical Review B.\\
+
+\noindent Best regards,\\
+
+\noindent Dr. Sean M. Anderson\\
+\href{mailto:sma@cio.mx}{sma@cio.mx}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Report of the First Referee -- BD13947/Anderson}
+
+Anderson, Mendoza, and Carriles present a first principles model of strain wave
+propagation through a Si(111):H slab and study how the linear optical
+reflectance changes as a result of a deep lying defect layer below the surface.
+The idea is to simulate the results of coherent phonon spectroscopy (CAP). The
+strain wave is modeled analytically and the optical response (change in
+reflectance) is computed in the independent particle picture. As both strain and
+light penetrate deeply into semiconductor slabs, and the the strain profile
+changes at each timestep, an ab initio approach is an ambitious undertaking.
+Here the authors use a very thick slab of 150 A, which forces them to use a 1x1
+cell and thus consider a simple defect represented by a displacement of one
+atomic layer. The authors acknowledge this is an unrealistic situation to
+produce experimentally, and while localized/point defects are beyond treatment,
+their approach may work for buried interfaces, dislocations, thin films, and so
+on. The paper is well written, the figures are clear, the analysis of the
+obtained spectra is interesting, and the approach, to my eyes, looks reasonable.
+\begin{shaded*}
+We thank the reviewer for the assessment and comments about our work. We have
+addressed the issues raised by the reviewer in what follows below.
+\end{shaded*}
+
+I recommend publication after the authors have considering the following:
+
+\begin{enumerate}
+
+\item My main worry about the approach is that the final signal (fig 2 b) 
+clearly reveals a new peak related to the defect, but does not seem sensitive
+enough to allow an experimentally measured defect position to be inferred (the
+differences between the various profiles is very small). The interesting change
+in reflectance with respect to the defect depth (Fig 4a) is I suppose integrated
+into the main peak in Fig 2b and thus the information is hidden. Is this
+correct?
+\begin{shaded*}
+Actually, the results presented in Fig. 4 are not integrated into any of the
+peaks featured in Fig. 2; rather, Fig. 4 represents the time-evolution of
+$\Delta R$ as the strain wave passes through the material. Each of the three
+panels represents a different spectral energy range, with panel (a)
+corresponding to the energy range of the defect peaks in the dashed box of Fig.
+2.
+
+As the strain wave maximum passes through the defect layer, there is an abrupt
+change in sign in the defect peak of the $\Delta R$ spectrum, that is not
+present in the other energy ranges. In order to elucidate the defect layer
+depth, the measurement would only have to be taken (for this particular
+material) over the 2.5--3.0\,eV energy range, and when the $\Delta R$ signal has
+an abrupt sign change, we know we have passed the defect layer.
+
+To make this clearer, we have added the appropriate time scale to the top of
+Fig. 4, which relates directly to the depth of the strain wave via the
+longitudinal velocity of sound in Si, which is 8433\,m\,s$^{-1}$ which is given
+in Table 1 of the manuscript. We have also added a brief explanation of this
+trend at the end of the third paragraph of page 5.
+\end{shaded*}
+
+\item The reason for the different scissors shifts for surface and bulk is not
+clear to me. I suppose that for a slab as thick as the one used here, the size
+quantization is minimal and the bulk states are well represented. Also: 3.4eV
+refers to the direct gap, which should be noted.
+\begin{shaded*}
+There are two susceptibilities required to calculate the reflectance:
+$\chi^{aa}_{sc}(\omega)$, which is the linear susceptibility for the supercell
+system, and $\boldsymbol{\chi}^{~}_{b}(\omega)$ which is the linear
+susceptibility of the isotropic bulk crystal. The former, is a surface response,
+while the latter is a bulk response; therefore, the optical band gap is not
+necessarily the same. For this reason, different scissors values are used.
+
+In this case, we used a $G_{0}W_{0}$ value (0.7\,eV) for the surface
+calculation; for the bulk calculation, we used a scissors shift of 0.98\,eV to
+obtain the experimental value of the optical band gap. However, we have verified
+our results by using the same $G_{0}W_{0}$ shift of 0.7\,eV for both surface and
+bulk responses. The difference between the results obtained from using a bulk
+scissors shift of 0.7 and 0.98\,eV was negligible.
+\end{shaded*}
+
+\item Can the authors explain the origin of the 2.8eV peak in terms of some
+localized defect state, rather than some general bond length argument? It may be
+useful to understand what kind of perturbation the approach is sensitive to.
+\begin{shaded*}
+This is a very interesting point for which we have added Fig. 5 and the
+associated explanation on page 6 of the manuscript. We think that this new
+material adds more value to the work, and strengthens the overall physical
+message being presented.
+\end{shaded*}
+
+\item Note some typos: page 6 ``present present'' and ``were we plot''
+\begin{shaded*}
+We have corrected the aforementioned typos, and have re-checked the grammar and
+spelling of the manuscript.
+\end{shaded*}
+
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Report of the Second Referee -- BD13947/Anderson}
+
+The authors present an original and well-written theoretical study on the
+influence of strain on surface optical properties. The work extends early
+research by Hingerl and co-workers on the influence of static strain [see, e.g.,
+App. Surf. Sci. 175/176 (2001) 769-776] (which probably should be cited in this
+context) to the dynamic range and points out an interesting application, the
+detection of buried defect layers.
+\begin{shaded*}
+We thank the reviewer for the assessment and insightful comments. We have added
+the suggested reference in the first paragraph of the introduction.
+\end{shaded*}
+
+The methodology is sound and the calculations are well done. There is one point
+I do not understand, however. The authors write (page 3) ``A scissors shift of
+0.7 eV was used for the surface susceptibility, obtained from G0W0 calculations
+[58]; a scissors shift of 0.98 eV was used for the bulk calculation'' A scissors
+shift 0.98 eV is in fact very large for DFT calculations on silicon. In an
+previous calculation on the optical response of Si(111):H [Phys. Rev. B 61, 7604
+(2000)] a value of 0.5 eV was used. In Ref. [58] cited by the authors a
+difference of 0.68 eV was found for bulk DFT and G0W0 calculation. The authors
+should explain (i) how they arrived at the values of 0.7 and 0.98 eV and (ii)
+how they apply these two different values to the calculation of the optical
+response. Do they weight the shift according to the surface-localization of the
+respective state?
+\begin{shaded*}
+We have explained this point in our reply to the first referee; please see point
+2 above.
+\end{shaded*}
+
+Once this clarified, I suppose the paper will be suitable for publication.
+
+\end{document}

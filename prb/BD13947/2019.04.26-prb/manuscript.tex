@@ -1,0 +1,1488 @@
+\documentclass[aps,prb,10pt,showkeys,letterpaper,notitlepage,twocolumn]{revtex4-1}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage[caption=false]{subfig}
+\usepackage[colorlinks=true,citecolor=red]{hyperref}
+
+\graphicspath{{.}{figures/}}
+
+\begin{document}
+
+\title{\emph{Ab initio} Modeling of Optical Functions after Strain Wave
+Perturbation for Defect Detection}
+\author{Sean M. Anderson}\email{sma@cio.mx}
+    \affiliation{Centro de Investigaciones en \'Optica, 
+                Le\'on, Guanajuato, M\'exico}
+\author{Bernardo S. Mendoza}%\email{bms@cio.mx}
+    \affiliation{Centro de Investigaciones en \'Optica, 
+                Le\'on, Guanajuato, M\'exico}
+\author{Ram\'on Carriles}%\email{ramon@cio.mx}
+    \affiliation{Centro de Investigaciones en \'Optica, 
+                Le\'on, Guanajuato, M\'exico}
+\date{\today}
+
+\begin{abstract}
+We model the change in the linear optical functions due to the propagation of a
+strain wave through a crystalline slab. Defects in the slab are introduced by
+arbitrarly displacing one of the atomic layers. The perturbing wave is assumed
+to be produced by laser light absorption; the properties of the propagating wave
+are explicitly related to the laser and material properties. We apply this model
+to a Si(111)(1$\times$1):H slab, and find that the reflectance varies
+significantly at photon energies above 2.5\,eV, and that the disordered slab
+produces significant changes in the reflectance when compared to the unperturbed
+slab. We then induce a defect layer in the slab by uniformly translating an
+atomic layer. As the strain wave passes through the material, the behavior of
+the calculated reflectance difference spectrum changes according to the defect
+layer, allowing us to discern the depth of the defect.
+\end{abstract}
+
+\keywords{reflectance spectroscopy, atomic disorder, strain wave, surface, depth
+probing}
+
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Introduction}\label{sec:intro}
+
+Defect characterization and profiling techniques in solid materials are becoming
+increasingly relevant, coinciding with the many new advances in micro- and
+opto-electronics. It is therefore desirable to develop techniques capable of
+non-destructive and \emph{in-situ} characterization; particularly, optical
+methods have a strong background of applications in this area. These
+developments require better theoretical models to understand the experimental
+observations. \emph{Ab initio} calculations have been used to obtain optical
+properties of materials under strain or with defects. With current computational
+systems the calculations from surface or bulk regions are both efficient and
+numerically accurate \cite{hoganPRB98, palummoPRB99, hoganPRB03, mendozaPRB06,
+palummoPRB09}.
+
+Experimentally, pump-probe techinques \cite{thomsenPRL84, thomsenPRB86,
+grahnJQE89, linJAP91, pfeiferPRL92} have been widely used to measure and
+characterize buried defects and interfaces. In these experiments, at least two
+laser beams with different intensities, typically sub-picosecond in duration,
+are incident on the sample with a temporal delay. The more intense pump beam is
+used to excite the sample, while the weaker probe beam (split off from the pump
+beam, or an independent synchronized beam) is used to sense the effect of the
+pump on the material. The temporal delay is controlled with a translational
+stage and can be as short as a few femtoseconds.
+
+Among these techniques, coherent acoustic phonon (CAP) spectroscopy (also known
+as picosecond ultrasonics) is well established. In this case, the pump is
+absorbed by the sample and induces a traveling strain wave that locally modifies
+the optical properties as it traverses the material. The probe pulse senses the
+induced changes and therefore provides information about the local environment
+inside the sample. Due to its flexibility, the CAP method has been used to study
+many sample attributes, such as structural properties of a wide range of
+materials \cite{limAPL03, bozovicPRB04, matsudaPRL04, rossignolPRL05, parkPRB05,
+wuAPL06, millerPRB06, wenAPL07, xuPSSC08, hudertJAP08, ruelloPRB09,
+babilottePRB10, ruelloAPL12, chenAPL12}, characterization of thin films
+\cite{gusevJAP11, matsudaJOSAB02}, determination of elasto-mechanical and
+optical properties \cite{grahnAPL88a, grahnAPL88b, rossignolPRL05, millerPRB06,
+xuPSSC08, taneiPRL08, qiPRB10}, low-frequency phonon dispersion and attenuation
+\cite{zhuPRB91, dalyPRB09}, roughness of buried interfaces \cite{tasAPL98},
+inhomogeneities in disordered films \cite{gusevJAP11}, doping profiles
+\cite{hudertJAP08}, lattice defects \cite{steigerwaldJAP12, steigerwaldAPL09,
+gregoryAPL12, baydinAPLP16}, and shear strain waves using time-resolved
+polarization measurements \cite{mounierEPJST08, mounierOE10}. Recently, the
+development of 2-dimensional materials and membranes has introduced new
+challenges related to the characterization of their properties. CAP has begun to
+be applied to thin films and free standing membranes \cite{linJPD16, hePRB17},
+magnetic nano-films \cite{linnikPS17}, nanoparticles \cite{baldiniNL18}, and van
+der Waals nanolayers \cite{greenerPRB18}; however, it is necessary to refine the
+current theoretical models to better understand how the presence of defects
+alters the material properties.
+ 
+In a previous work \cite{andersonPSSB18}, we presented a simple \emph{ab initio}
+model to study how the displacement of a single atomic layer inside a material
+affected its linear optical properties. We applied the model to a
+Si(111)(1$\times$1):H slab and found that the predicted reflectance changes were
+within the sensitivity range of lock-in techniques. In this work, we simulate
+the propagation of a strain wave inside a material and the related atomic
+displacement induced by the traveling wave, and calculate the resulting change
+in the dielectric function. The goal of this work is twofold: first, to develop
+a realistic model of strain waves, and how they perturb a given material at the
+atomic level; second, to apply the developed model towards the detection of
+buried defects or interfaces. Although our calculations are done using an
+analytical form of a CAP strain wave, our model is valid for any type of
+deformations induced in the bulk atomic positions.
+
+This paper is organized as follows. In Sec. \ref{sec:theory}, we present the
+relevant equations and theory that characterize both the strain wave and the
+reflectance difference spectrum. In Sec. \ref{sec:results}, we present and
+analyze the calculated reflectance from probing a Si(111)(1$\times$1):H surface
+as a test case, exploring several cases including buried defects. Finally, we
+list our conclusions and final remarks in Sec. \ref{sec:conc}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Theory}\label{sec:theory}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Strain wave generation from CAP pulses}
+
+We previously developed a simple proof-of-concept model \cite{andersonPSSB18}
+where individual atomic layers were uniformly translated up or down by a given
+percentage. These movements yielded a clear difference in reflectivity between
+the perturbed and unperturbed slabs, with discernible changes when either
+diagonal or vertical bonds underwent the deformation; specifically, elongation
+of the diagonal bonds (compression of the vertical bonds) leads to an increase
+in the reflectance difference spectrum.
+
+Our goal is now to extend and improve upon our previous work, and create a far
+more realistic strain wave model that is capable of detecting defects within a
+given slab. As a starting point, Ref. \onlinecite{wuPRB07} extends upon
+previously developed analytical models for strain wave generation from CAP
+\cite{thomsenPRB86}, and demonstrates that the electronic stress plays a large
+role in inciting the CAP pulse. The produced strain in the $z$ direction,
+$\eta_{zz}$, can be approximated in simple analytical form as \cite{wuPRB07}
+\begin{equation}\label{eq:strain}
+\eta_{zz}(z,t) = -A e^{-\alpha|z - v_{s}t|} \,\mathrm{sgn}(z - v_{s}t),
+\end{equation}
+where $\alpha$ is the absorption coefficient of the material at the pump beam
+energy, and $v_{s}$ is the longitudinal sound velocity. The dimensionless
+pre-factor $A$ determines the strength of the strain wave and is given by
+\begin{equation}\label{eq:prefactor}
+\begin{split}
+A = \frac{\alpha(1 - R_{\mathrm{pump}})Q}
+         {2E_{\mathrm{pump}}\rho v_{s}^{2}}
+\bigg[
+&- \left(d_{c} + d_{v}\right)\\
+&+ \frac{3B\beta}{C_{V}}\left(E_{\mathrm{pump}} - E_{g}\right)
+\bigg],
+\end{split}
+\end{equation}
+where $R_{\mathrm{pump}}$, $Q$, and $E_{\mathrm{pump}}$ are the reflectance,
+fluence, and photon energy of the pump beam, $E_{g}$ is the band gap energy,
+$\rho$ is the mass density, $d_{c}$ and $d_{v}$ are the electron and hole
+deformation potentials, $B$ is the bulk modulus, $\beta$ is the linear thermal
+expansion coefficient, and $C_{V}$ is the specific heat per unit volume. The
+produced strain in Eq. \eqref{eq:strain} is related to the lattice displacement
+$u(z,t)$ as
+\begin{equation*}
+\eta_{zz}(z,t) = \frac{\partial u(z,t)}{\partial z};
+\end{equation*}
+after integrating with respect to $z$, we finally obtain
+\begin{equation}\label{eq:displacement}
+\begin{split}
+u(z,t)
+&= -\frac{A}{2 \alpha}\bigg(
+e^{\alpha (-z + v_{s}t)}
+\Big[\,\mathrm{sgn}(-z + v_{s}t) - 1\Big]\\
+&\hspace{1.05cm}+
+e^{\alpha (+z - v_{s}t)}
+\Big[\,\mathrm{sgn}(+z - v_{s}t) - 1\Big]
+\bigg).
+\end{split}
+\end{equation}
+Fig. \ref{fig:pulse} depicts the calculated strain and displacement profiles
+obtained from Eqs. \eqref{eq:strain} and \eqref{eq:displacement} for a fixed
+time $t$ as functions of the distance traveled, into the material, $z-v_{s}t$.
+These curves are produced using physical parameters for silicon (see Tables
+\ref{tab:constants} and \ref{tab:params}). As the pulse travels through the
+material, the atoms will be displaced according to Eq. \eqref{eq:displacement};
+thus, careful selection of the beam characteristics will greatly affect how much
+the (and how many) atoms are displaced from their equilibrium positions.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{fig01}
+\caption{Time-snapshot of the \textbf{(a)} strain and \textbf{(b)} displacement
+profiles (as functions of the distance traveled) of a CAP pulse using parameters
+for silicon (Tables \ref{tab:constants} and \ref{tab:params}). These plots were
+calculated for a fluence $Q = 0.3$\,mJ/cm$^{2}$, a pump photon energy
+$E_{\mathrm{pump}} = 3.54$\,eV which corresponds to an absorption coefficient
+$\alpha = 1.04\times10^{6}$\,cm$^{-2}$. \textbf{(c)} Cartoon representation of
+the slab unit cell, with two Si labeled atoms that will be moved in the
+direction indicated to create buried defect layers. The $x$ and $y$ axes are
+taken along the [$11\bar{2}$] and [$1\bar{1}0$] directions, respectively.}
+\label{fig:pulse}
+\end{figure}
+
+\begin{table}[b]
+\caption{Material constants for silicon.}
+\label{tab:constants}
+\begin{ruledtabular}
+\begin{tabular}{ l l l }
+Parameter                               & Sym.      & Value                           \\
+\hline
+Longitudinal sound velocity             & $v_{s}$   & 8433\,m\,s$^{-1}$\cite{sisound} \\
+Mass density                            & $\rho$    & 2.3296\,g\,cm$^{-3}$            \\
+Bulk modulus                            & $B$       & 98\,GPa\cite{hopcroftJMS10}     \\
+Thermal expansion coefficient           & $\beta$   & $2.56\times10^{-6}$\,K$^{-1}$   \\
+Electron deformation potential          & $d_{c}$   & 9.5\,eV\cite{lundstrom2000}     \\% Table 2.1, p. 114
+Hole deformation potential              & $d_{v}$   & 5.0\,eV\cite{lundstrom2000}     \\% Table 2.1, p. 114
+Direct Band gap                         & $E_{g}$   & 3.4\,eV\cite{landolt}           \\
+Specific heat per unit volume           & $C_{V}$   & 1.63072\,J\,cm$^{-3}$\,K$^{-1}$ \\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+\begin{table}[t]
+\caption{Beam and wavelength-dependent parameters used throughout this work,
+unless stated otherwise.}
+\label{tab:params}
+\begin{ruledtabular}
+\begin{tabular}{ l l l }
+Parameter               & Sym.                  & Value                          \\
+\hline
+Pump beam fluence       & $Q$                   & 0.5861\,mJ\,cm$^{-2}$          \\
+Pump beam energy        & $E_{\mathrm{pump}}$   & 3.54\,eV                       \\
+Pump beam reflectance   & $R_{\mathrm{pump}}$   & 0.56538                        \\
+Pump beam absorption    & $\alpha$              & $1.04\times10^{-6}$\,cm$^{-1}$ \\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{\emph{Ab initio} calculation of the reflectance}
+
+To model a semi-infinite crystal, we create a slab consisting of $N$ atomic
+layers and thickness $D$ inside of a super-cell of height $L$; this super-cell
+includes a vacuum region that is large enough to avoid spurious wavefunction
+tunneling into neighboring super-cells \cite{mendozaPRB06}. The slab surface is
+parallel to the $xy$ plane. The reflectance difference spectrum $\Delta R$ is
+defined as \cite{mendozaPRB06}
+\begin{equation*}
+\Delta R 
+= \frac{R_{x}+R_{y}}{2}\bigg|_{\mathrm{unperturbed}}
+- \frac{R_{x}+R_{y}}{2}\bigg|_{\mathrm{perturbed}}
+,
+\end{equation*}
+where $R_{\mathrm{a}}$ ($\mathrm{a} = x$ or $y$) is the normal incident
+reflectance for linearly polarized light in the $\hat{\mathbf{a}}$ direction. As
+explained above, the advancing strain wave will displace the atoms of the slab
+away from their equilibrium positions; we calculate $R_{\mathrm{a}}$ for this
+perturbed slab and obtain the difference ($\Delta R$) between the reflectance of
+the perturbed and unperturbed slabs. $R_{\mathrm{a}}$ can be calculated through
+the optical response of the slab system \cite{delsolechap95} as
+\begin{equation*}
+R_{\mathrm{a}} = 
+4\left(\frac{\omega}{c}\right)
+\mathrm{Im}
+\bigg[
+\frac{(D/2)\chi^{\mathrm{aa}}_{sc}(\omega)}
+     {\boldsymbol{\chi}^{~}_{b}(\omega)}
+\bigg]
+,
+\end{equation*}
+where $\omega$ is the angular frequency of the normally incident light impinging
+at the slab surface, $c$ is the speed of light, $D/2$ is half of the slab
+thickness, $\boldsymbol{\chi}_{sc}(\omega)$ is the linear susceptibility for the
+supercell system, and $\boldsymbol{\chi}^{~}_{b}(\omega)$ is the linear
+susceptibility of the isotropic bulk crystal.
+
+The linear susceptibility tensor is calculated within the independent-particle
+framework as
+\begin{equation}\label{eq:chi1}
+\chi^{\mathrm{aa}}(\omega) =
+\frac{e^{2}}{\hbar}
+\int\frac{d\mathbf{k}}{8\pi^{3}}
+\sum_{m<n}\frac{2f_{mn}(\mathbf{k})}{W_{nm}(\omega)}
+\mathrm{Im}
+\left[
+v^{\mathrm{a}}_{nm}(\mathbf{k})r^{\mathrm{a}}_{mn}(\mathbf{k})
+\right],
+\end{equation}
+where $v^{\mathrm{a}}_{nm}(\mathbf{k})$ and $r^{\mathrm{a}}_{nm}(\mathbf{k})$
+are the matrix elements of the electron velocity and position operators, with
+$\mathrm{a,\,b} = x,y$ and $n$, $m$ represent the electronic bands. The
+Fermi-Dirac distribution is represented as a Heaviside function,
+$f_{n}(\mathbf{k}) = \Theta\left(E_{F} - E_{n}(\mathbf{k})\right)$, where
+$E_{F}$ is the Fermi energy, $E_{n} = \hbar \omega_{n}(\mathbf{k})$ is the
+energy of the electronic band $n$ at point $\mathbf{k}$ in the irreducible
+Brillouin zone, and $f_{mn}(\mathbf{k}) = f_{m}(\mathbf{k}) -
+f_{n}(\mathbf{k})$. Lastly, we have
+\begin{equation*}\label{eq:wnm}
+W_{nm}(\omega) =
+(\omega_{nm} - \omega - i\gamma)
+(\omega_{nm} + \omega + i\gamma),
+\end{equation*}
+where $\omega_{nm}(\mathbf{k}) = \omega_{n}(\mathbf{k}) -
+\omega_{m}(\mathbf{k})$. Many-body interactions can be included in
+$\omega_{nm}(\mathbf{k})$ by making use of the scissors operator. The first
+(second) term includes the resonant (nonresonant) terms. $\gamma$ signifies the
+adiabatic switching of the interaction, and can also be used to include the
+broadening of the electronic levels. The limit of $\gamma\to 0$ leads to the
+Dirac delta functions $\delta(\omega_{nm}(\mathbf{k}) - \omega)$ for the
+resonant term, and $\delta(\omega_{nm}(\mathbf{k}) + \omega)$ for the
+nonresonant term; both are needed to accurately calculate
+$\chi^{\mathrm{aa}}(\omega)$ \cite{tancognePRB14}. The bulk susceptibility,
+$\boldsymbol{\chi}^{~}_{b}(\omega)$, is obtained by using a bulk unit cell in
+Eq. \eqref{eq:chi1}; likewise, $\boldsymbol{\chi}_{sc}(\omega)$ is obtained by
+using a supercell, where it must be properly normalized with respect to the
+vacuum included in the total supercell height $L$ \cite{tancognePRB15}. Then, we
+take $\boldsymbol{\chi}_{sc}(\omega)\to(L/D)\boldsymbol{\chi}_{sc}(\omega)$, so
+that even if a larger vacuum region is included, the results remains invariant.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Test Case, Computational Details, and Depth probing}
+
+We carry out our study using the Si(111)(1$\times$1):H surface, where the
+addition of an H atom at each surface passivates the dangling bond of the ideal
+Si(111) bulk and yields an unreconstructed surface with a 1$\times$1 unit cell.
+In this work, our surface is represented by a centrosymmetric slab of 98 atomic
+layers comprised of 96 Si atoms between two H atoms, one at each surface; the
+total height of this slab is $151$\,\r{A}. This number of atoms results in a
+total of 193 occupied states (neglecting spin); we can fully describe the
+desired spectral energy range by including 107 unoccupied states. The hexagonal
+symmetry of this surface is such that $\chi^{xx}_{sc}(\omega) =
+\chi^{yy}_{sc}(\omega)$, and thus $R_{x} = R_{y}$.
+
+The self-consistent ground state and the Kohn-Sham states needed to construct
+the electron velocity and position matrix elements in Eq. \eqref{eq:chi1}, were
+calculated within the DFT-LDA framework using the plane-wave ABINIT code
+\cite{gonzeCPS09, abinit} using a planewave basis set with Troullier-Martin LDA
+pseudopotentials \cite{troullierPRB91}. Our calculation of
+$\chi^{aa}_{sc}(\omega)$ was carried out using the TINIBA code \cite{tiniba}. We
+found converged results with 91 \textbf{k}-points in the irreducible Brillouin
+zone (equivalent to 1922 \textbf{k}-points when neglecting symmetry relations)
+and an energy cutoff of 7 Hartrees. Likewise, 3107 $\mathbf{k}$ points and a
+cutoff energy of 10 Ha were used for the bulk
+$\boldsymbol{\chi}^{~}_{b}(\omega)$ calculation. A scissors shift of 0.7 eV was
+used for the surface susceptibility, obtained from $G_{0}W_{0}$ calculations
+\cite{liPRB10}; a scissors shift of 0.98 eV was used for the bulk calculation in
+order to adjust the theoretical band gap to the experimental value of 3.4 eV
+\cite{landolt}. The contribution from the nonlocal part of the pseudopotentials
+\cite{andersonPRB15} was carried out using the DP \cite{olevanoDP, reiningEXC}
+code with a basis set of 5000 planewaves.
+
+Eqs. \eqref{eq:prefactor} and \eqref{eq:displacement} establish how the physical
+parameters of the material, in conjunction with the pump beam properties, are
+responsible for determining the strain wave displacement amplitude and width.
+Some of these parameters are constants that are specific to the material; for
+instance, see Table \ref{tab:constants} for a summary of the physical constants
+for silicon. Parameters such as $E_{\mathrm{pump}}$ and $Q$ are determined
+solely by the laser system, while $\alpha$ and $R_{\mathrm{pump}}$ are both
+material-specific and wavelength-dependent. This gives us flexibility to select
+the best parameters for modeling a realistic strain wave that is well-suited for
+our sample slab (with the necessary computational expense), while using
+real-world beam characteristics that can be found in many modern ultrafast laser
+systems. Table \ref{tab:params} summarizes the beam and wavelength-dependent
+parameters we used throughout this work, unless stated otherwise.
+
+After selecting the appropriate constants and parameters, we simulate the
+traveling strain wave by calculating the atomic displacement from Eq.
+\eqref{eq:displacement}. The maximum displacement wave-front travels through the
+slab (localized at $v_{s}t$), and the atoms are displaced by the corresponding
+amount depending on their distance from the wave-front. In order to minimize the
+computation expense, we executed a calculation with the wave-front centered at
+the $z$-coordinate of each atomic layer. Therefore, each result presented below
+consists of 98 separate calculations, one for each step in the strain wave's
+movement through the slab. It is important to note that the constants and
+parameters from Tables  \ref{tab:constants} and \ref{tab:params} produce a
+strain wave that is wider than our 151\,\r{A}-deep slab; however, as we are
+mostly interested in the defect-probing capabilities, the small size of the slab
+is not a limitation.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Results}\label{sec:results}
+
+In this section, we will review our calculated results for $\Delta R$ generated
+by perturbing the Si(111)(1$\times$1):H test slab with a strain wave generated
+with the parameters from Tables \ref{tab:constants} and \ref{tab:params}. We
+will consider the upper slab surface at $z = 0$, and the bottom surface at $z =
+151$\,\r{A}; while this size is several orders of magnitude smaller than the
+samples used in most CAP experiments \cite{steigerwaldAPL09, steigerwaldJAP12,
+cuffePRL13, lawlerMRE14}, we are still able to gain insight on the microscopic
+perturbations that lead to significant changes in the reflectance difference
+spectrum.
+
+\begin{figure}[b]
+\includegraphics[width=\linewidth]{fig02}
+\caption{\textbf{(a)} $\Delta R$ for maximum displacements of 40, 30, and 20\,\%
+of the diagonal bond height $H_{d} = 0.784$\,\r{A}, generated with three
+different fluence values ($Q = 0.586$, 0.440 and 0.293\,mJ\,cm$^{-2}$).
+\textbf{(b)} $\Delta R$ calculated from a max. displacement of 40\,\% of $H_{d}$
+for the normal slab and five cases of slabs with defect layers at the atom
+indicated in the label for each curve; all curves are produced when the strain
+maximum (the wave-front) is at the top surface of the material. The dashed box
+highlights the defect peak.}
+\label{fig:diffs}
+\end{figure}
+
+Fig. \ref{fig:diffs}, panel (a) presents $\Delta R$ generated by the CAP pulse
+at the top surface of the slab ($z = 0$) for maximum displacement values of
+0.313, 0.235, and 0.157\,\r{A}, which represent 40, 30, and 20\,\% of the
+diagonal bond height $H_{d} = 0.784$\,\r{A}. These displacements are generated
+using fluence values of $Q = 0.586$, 0.440 and 0.293\,mJ\,cm$^{-2}$,
+respectively, and are of the same order as those induced in real samples during
+a CAP experiment \cite{lawlerMRE14}, and are large enough to create clear
+features in the spectrum, without creating spurious effects from overly
+distorted atomic positions. We can see that $\Delta R$ changes monotonically
+with the fluence; as the fluence is only limited by the damage threshold of the
+sample material, we can essentially select any realistic value that yields
+desirable pulse characteristics. Thus, we will use $Q = 0.586$\,mJ\,cm$^{-2}$
+(max. displacement of 40\,\% $H_{d}$) for the remainder of this work.
+
+Given that the strain pulse is capable of generating a significant change in the
+reflectance, we are now ready to analyze the effect of defects and buried
+interfaces on the spectrum. Fig. \ref{fig:diffs}, panel (b) presents $\Delta R$
+generated by the strain wave wave-front at the top-most surface atom of a
+variety of slabs, with and without defect layers. To identify which atom will be
+moved to create a defect layer, we tag each one in consecutive order starting at
+the surface, i.e. H$_{1}$ and Si$_{2}$ down to Si$_{97}$ and H$_{98}$. Odd Si
+atoms have the vertical bonds going down and the slanted bonds going up, and
+vice versa for the even Si atoms; see Fig. \ref{fig:pulse}, panel (c) for a
+cartoon representation of the slab. We create the defect layers by moving a
+given atom up or down by 0.313\,\r{A} (40\,\% of $H_{d}$); Si$_{13}$ is moved
+downwards, while Si$_{14}$, Si$_{26}$, and Si$_{50}$ are moved upwards. The
+curve labeled ``None'' (black solid line) is the slab without any defect, the
+same shown in panel (a).
+
+Between 3.0--5.0\,eV, $\Delta R$ remains quite similar between the normal and
+defective slabs. The spectra is dominated by 2 peaks at around $\sim$3.4\,eV and
+$\sim$4.3\,eV, which correspond to the E$_{1}$ and E$_{2}$ critical points of
+silicon, with a smaller feature around 4.0\,eV. These peaks mostly retain their
+position despite the presence of the defect layers, with small variations in the
+peak height. The most interesting feature of the spectra occurs in 2.5--3.0\,eV
+energy range, highlighted in the dashed box. A small peak emerges for the
+defective slabs that is completely absent from the spectra of the normal slab.
+The height of this peak is larger for slabs with the defect layer closer to the
+upper surface; likewise, the peak energy position also shifts slightly from
+higher energies to lower energies in the same manner. For convenience of
+notation, we will call this the defect peak.
+
+\begin{figure}[t]
+\centering
+\subfloat[Strain wave traveling through a slab with no defect. $\Delta R$ goes
+from maximum to minimum, passing through zero at the middle of the slab. The
+thin black line indicates the center of the slab at which $\Delta R$ is at a
+minimum.\label{fig:depth_normal}]
+{\includegraphics[width=0.95\linewidth]{fig03a}}
+\\
+\subfloat[Strain wave traveling through a slab with a defect layer at atom
+Si$_{50}$. The defect peak goes from positive to negative at the exact position
+of the defect layer. The thin black line is a visual aid indicating the depth at
+which change in $\Delta R$ occurs due to the defect
+layer.\label{fig:depth_defect}] {\includegraphics[width=0.95\linewidth]{fig03b}}
+\caption{Three-dimensional representation of the reflectivity difference
+spectrum ($\Delta R$) as a function of the strain wave depth inside the slab.
+The red arrow indicates the direction of propagation of the wave, starting at a
+depth of 0 (top surface of the slab) to 151\,\r{A} (bottom surface of the slab).
+Colored energy regions will be referred to below.}
+\label{fig:depth}
+\end{figure}
+
+To explore the depth-probing effects of the strain wave, and the nature of the
+defect peak, in Fig. \ref{fig:depth} we present two three-dimensional
+representations of $\Delta R$ as the strain wave travels through the slab.
+First, Fig. \ref{fig:depth_normal} shows the wave traveling through the normal
+slab without defects. $\Delta R$ starts at its maximum value as the wave-front
+is located at the material surface. At the middle of the slab, $\Delta R$
+essentially goes to zero; after this point, $\Delta R$ goes to negative values,
+inverting the shape from the upper half of the slab. This behavior is due to the
+fact that our Si(111)(1$\times$1):H slab is centrosymmetric; as the wave reaches
+the middle of the slab, the strain wave deforms the upper half in almost exactly
+the same way as the lower half. The changes in the reflectance from the upper
+half cancel out those from the lower half, and thus $\Delta R$ mostly vanishes.
+As shown previously in Fig. \ref{fig:diffs}, the region between 2.5--3.0\,eV is
+devoid of any activity.
+
+Second, Fig. \ref{fig:depth_defect} presents the same representation for a slab
+with a defect layer present at atom Si$_{50}$, indicated by the black arrow. The
+general behavior is similar to the normal slab from Fig. \ref{fig:depth_normal};
+however, the defect peak suffers a very marked sign change, from positive to
+negative, at the exact position of the defect layer. In fact, we can see a
+disturbance across the entire energy range when reaching the defect layer. This
+behavior remains consistent for the other defective slabs listed in Fig.
+\ref{fig:diffs}. The colored regions on the grid below the plot highlight three
+energy ranges; light red for 2.5--3.0\,eV, light green for 3.0--3.5\,eV, and
+light purple for 4.0--4.5\,eV, representing the defect peak, the E$_{1}$ peak,
+and the E$_{2}$ peak, respectively. In order to better analyze the changes to
+$\Delta R$ in the presence of the defect layers, we will study the peaks located
+in each of these energy ranges separately.
+
+\begin{figure}[b]
+\includegraphics[width=\linewidth]{fig04}
+\caption{Peak behavior for the normal and defective slabs, over the \textbf{(a)}
+2.5--3.0\,eV, \textbf{(b)} 3.0--3.5\,eV, and \textbf{(c)} 4.0--4.5\,eV regions.
+These correspond to the light red, light green, and light purple regions from
+Fig. \ref{fig:depth}, respectively. Thin vertical colored dashed lines indicate
+the defect depth within the slab. The thick black vertical dashed line
+represents the middle of the slab.}
+\label{fig:peaks}
+\end{figure}
+
+We present present the aforementioned peak analysis in Fig. \ref{fig:peaks},
+were we plot the intensity of each peak as a function of the strain wave depth
+within the slab. Panel (a) depicts the defect peak behavior in the 2.5--3.0\,eV
+range (light red region from Fig. \ref{fig:depth}), panel (b) for the E$_{1}$
+peak in the 3.0--3.5\,eV range (light green region), and the E$_{2}$ peak in the
+4.0--4.5\,eV range (light purple region). We can now clearly see the behavior of
+the defect peak for the different defective slabs; when the strain wave reaches
+a defect layer, the defect peak goes from positive to negative. The peak
+amplitude remains negative after the inversion, and for the remainder of the
+strain wave's course through the slab.
+
+Following the same analysis for the E$_{1}$ and E$_{2}$ peaks (panels (b) and
+(c)), we see that the induced behavior is not nearly as obvious as for the
+defect peak. For the slab with the Si$_{26}$ defect layer, there is a small dip
+in the intensity occurring for both peaks before the reaching the defect layer.
+Likewise, both peaks have a similar amplitude dip for the Si$_{13}$ and
+Si$_{14}$ defective slabs. Interestingly, the places where amplitude of the
+E$_{1}$ peak from the defective slabs crosses over the curve representing the
+normal slab (black curve) is quite close to the actual defect layer locations.
+In other words, the magnitude of the E$_{1}$ peak increases after a defect
+layer, when compared directly to the same peak produced in the normal slab.
+However, this difference is relatively small and may not be distinct enough to
+be measured; also, this behavior is not as strictly followed for the E$_{2}$
+peak. Lastly, the slab with the Si$_{50}$ defect layer follows similar trends,
+but since the defect is located at the very center of the slab, the changes are
+more gradual and are quite close to the normal slab. However, the inflection
+point of the curve does indeed indicate the exact location of the defect layer.
+
+These results are consistent with our previous work \cite{andersonPSSB18}. In
+particular, defect layers leading to elongated diagonal bonds (corresponding to
+upward displacement of even Si atoms, or downward displacement of odd Si atoms)
+yield an increase in $\Delta R$ precisely around the same energy energy range
+($>2.5$\,eV) as the defect peak reported here. If we consider the response of
+the bonds as linear harmonic oscillators, an electron in an elongated bond will
+have a looser confinement compared to a compressed bond. The electron potential
+for the elongated bond will have a lower curvature, implying that the resonant
+frequency (proportional to the curvature) will be lower; thus, the elongated
+bond has a higher polarizability which leads to a larger $\Delta R$.
+
+Our results clearly show that the calculated signals are well within the
+detection range of lock-in techniques; thus, depth-probing and defect detection
+should be possible with this method. Experimentally, it is not easy to obtain a
+sample as the ones described above. However, a feasible test material could be
+synthesized with a buried monolayer comprised of some other material, in lieu of
+having a layer of atoms displaced from their equilibrium position. We emphasize
+that even though the specifics of our results depend on the excitation, the
+model can be applied to an arbitrary perturbation that produces a strain wave,
+and is not necessarily exclusive to CAP experiments. Although the type of defect
+layer presented here (created via uniform atomic displacement) would be
+difficult to recreate experimentally, it provides an effective test platform for
+our method. Localized defects, such as those produced by doping, require very
+large unit cells that increase the computional demand of the calculations. As
+is, our method should be effective at discovering buried interfaces, even
+between different materials.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Conclusions}\label{sec:conc}
+
+Overall, our method for modeling the atomic displacement in a crystalline slab
+induced by an advancing strain wave proves to be effective at discerning buried
+defect layers. The strain wave is obtained by using realistic material constants
+and beam parameters; thus, the atomic displacement is an accurate representation
+of what might occur with a strain wave from a CAP experiment. The calculated
+difference reflectance spectrum for our Si(111)(1$\times$1):H test system yields
+a unique  peak in the 2.5--3.0\,eV energy range that acts as a defect signature,
+allowing us to accurately pinpoint the defect layer depth.
+
+Although the model presented here is a significant advancement over our previous
+work \cite{andersonPSSB18} due to the more accurate representation of the strain
+wave, we have yet to incorporate the interference effects that occur as the
+probe light enters the material and interacts with the strain wave, and
+undergoes multiple reflections before exiting the material. This would require
+either a much larger slab, so that the atoms displaced by the strain wave could
+be more localized, or the use of another material with constants that lead to a
+much narrower strain wave. Larger slabs lead to significantly larger
+computational expense; therefore, we consider that there may be other materials
+that could produce very localized strain waves, where the disordered region can
+be clearly isolated from the remainder of the unperturbed material. The
+development of such a model would essentially complete our proposed \emph{ab
+initio} description of CAP spectroscopy, and should be achievable in the near
+future.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Acknowledgements}
+Ram\'on Carriles and Bernardo S. Mendoza thank the \emph{Red
+Nanociencias y Nanotecnolog\'ia} of Mexico for partial financial support.
+
+% \bibliography{refs}
+\bibliographystyle{apsrev4-1}
+
+\begin{thebibliography}{63}%
+\makeatletter
+\providecommand \@ifxundefined [1]{%
+ \@ifx{#1\undefined}
+}%
+\providecommand \@ifnum [1]{%
+ \ifnum #1\expandafter \@firstoftwo
+ \else \expandafter \@secondoftwo
+ \fi
+}%
+\providecommand \@ifx [1]{%
+ \ifx #1\expandafter \@firstoftwo
+ \else \expandafter \@secondoftwo
+ \fi
+}%
+\providecommand \natexlab [1]{#1}%
+\providecommand \enquote  [1]{``#1''}%
+\providecommand \bibnamefont  [1]{#1}%
+\providecommand \bibfnamefont [1]{#1}%
+\providecommand \citenamefont [1]{#1}%
+\providecommand \href@noop [0]{\@secondoftwo}%
+\providecommand \href [0]{\begingroup \@sanitize@url \@href}%
+\providecommand \@href[1]{\@@startlink{#1}\@@href}%
+\providecommand \@@href[1]{\endgroup#1\@@endlink}%
+\providecommand \@sanitize@url [0]{\catcode `\\12\catcode `\$12\catcode
+  `\&12\catcode `\#12\catcode `\^12\catcode `\_12\catcode `\%12\relax}%
+\providecommand \@@startlink[1]{}%
+\providecommand \@@endlink[0]{}%
+\providecommand \url  [0]{\begingroup\@sanitize@url \@url }%
+\providecommand \@url [1]{\endgroup\@href {#1}{\urlprefix }}%
+\providecommand \urlprefix  [0]{URL }%
+\providecommand \Eprint [0]{\href }%
+\providecommand \doibase [0]{http://dx.doi.org/}%
+\providecommand \selectlanguage [0]{\@gobble}%
+\providecommand \bibinfo  [0]{\@secondoftwo}%
+\providecommand \bibfield  [0]{\@secondoftwo}%
+\providecommand \translation [1]{[#1]}%
+\providecommand \BibitemOpen [0]{}%
+\providecommand \bibitemStop [0]{}%
+\providecommand \bibitemNoStop [0]{.\EOS\space}%
+\providecommand \EOS [0]{\spacefactor3000\relax}%
+\providecommand \BibitemShut  [1]{\csname bibitem#1\endcsname}%
+\let\auto@bib@innerbib\@empty
+%</preamble>
+\bibitem [{\citenamefont {Hogan}\ and\ \citenamefont
+  {Patterson}(1998)}]{hoganPRB98}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.~D.}\ \bibnamefont
+  {Hogan}}\ and\ \bibinfo {author} {\bibfnamefont {C.~H.}\ \bibnamefont
+  {Patterson}},\ }\href {http://prb.aps.org/abstract/PRB/v57/i23/p14843_1}
+  {\bibfield  {journal} {\bibinfo  {journal} {Phys. Rev. B}\ }\textbf {\bibinfo
+  {volume} {57}},\ \bibinfo {pages} {14843} (\bibinfo {year}
+  {1998})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Palummo}\ \emph {et~al.}(1999)\citenamefont
+  {Palummo}, \citenamefont {Onida}, \citenamefont {Del~Sole},\ and\
+  \citenamefont {Mendoza}}]{palummoPRB99}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Palummo}}, \bibinfo {author} {\bibfnamefont {G.}~\bibnamefont {Onida}},
+  \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont {Del~Sole}}, \ and\
+  \bibinfo {author} {\bibfnamefont {B.~S.}\ \bibnamefont {Mendoza}},\ }\href
+  {\doibase 10.1103/PhysRevB.60.2522} {\bibfield  {journal} {\bibinfo
+  {journal} {Phys. Rev. B}\ }\textbf {\bibinfo {volume} {60}},\ \bibinfo
+  {pages} {2522} (\bibinfo {year} {1999})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Hogan}\ \emph {et~al.}(2003)\citenamefont {Hogan},
+  \citenamefont {Del~Sole},\ and\ \citenamefont {Onida}}]{hoganPRB03}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.}~\bibnamefont
+  {Hogan}}, \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont {Del~Sole}}, \
+  and\ \bibinfo {author} {\bibfnamefont {G.}~\bibnamefont {Onida}},\ }\href
+  {\doibase 10.1103/PhysRevB.68.035405} {\bibfield  {journal} {\bibinfo
+  {journal} {Phys. Rev. B}\ }\textbf {\bibinfo {volume} {68}},\ \bibinfo
+  {pages} {035405} (\bibinfo {year} {2003})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Mendoza}\ \emph {et~al.}(2006)\citenamefont
+  {Mendoza}, \citenamefont {Nastos}, \citenamefont {Arzate},\ and\
+  \citenamefont {Sipe}}]{mendozaPRB06}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {B.~S.}\ \bibnamefont
+  {Mendoza}}, \bibinfo {author} {\bibfnamefont {F.}~\bibnamefont {Nastos}},
+  \bibinfo {author} {\bibfnamefont {N.}~\bibnamefont {Arzate}}, \ and\ \bibinfo
+  {author} {\bibfnamefont {J.~E.}~\bibnamefont {Sipe}},\ }\href {\doibase
+  10.1103/PhysRevB.74.075318} {\bibfield  {journal} {\bibinfo  {journal} {Phys.
+  Rev. B}\ }\textbf {\bibinfo {volume} {74}},\ \bibinfo {pages} {075318}
+  (\bibinfo {year} {2006})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Palummo}\ \emph {et~al.}(2009)\citenamefont
+  {Palummo}, \citenamefont {Witkowski}, \citenamefont {Pluchery}, \citenamefont
+  {Del~Sole},\ and\ \citenamefont {Borensztein}}]{palummoPRB09}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Palummo}}, \bibinfo {author} {\bibfnamefont {N.}~\bibnamefont {Witkowski}},
+  \bibinfo {author} {\bibfnamefont {O.}~\bibnamefont {Pluchery}}, \bibinfo
+  {author} {\bibfnamefont {R.}~\bibnamefont {Del~Sole}}, \ and\ \bibinfo
+  {author} {\bibfnamefont {Y.}~\bibnamefont {Borensztein}},\ }\href {\doibase
+  10.1103/PhysRevB.79.035327} {\bibfield  {journal} {\bibinfo  {journal} {Phys.
+  Rev. B}\ }\textbf {\bibinfo {volume} {79}},\ \bibinfo {pages} {035327}
+  (\bibinfo {year} {2009})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Thomsen}\ \emph {et~al.}(1984)\citenamefont
+  {Thomsen}, \citenamefont {Strait}, \citenamefont {Vardeny}, \citenamefont
+  {Maris}, \citenamefont {Tauc},\ and\ \citenamefont {Hauser}}]{thomsenPRL84}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.~H.}\ \bibnamefont
+  {Thomsen}}, \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Strait}},
+  \bibinfo {author} {\bibfnamefont {Z.}~\bibnamefont {Vardeny}}, \bibinfo
+  {author} {\bibfnamefont {H.~J.}\ \bibnamefont {Maris}}, \bibinfo {author}
+  {\bibfnamefont {J.}~\bibnamefont {Tauc}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {J.~J.}\ \bibnamefont {Hauser}},\ }\href
+  {https://journals.aps.org/prl/abstract/10.1103/ PhysRevLett.53.989}
+  {\bibfield  {journal} {\bibinfo  {journal} {Phys. Rev. Lett.}\ }\textbf
+  {\bibinfo {volume} {53}},\ \bibinfo {pages} {989} (\bibinfo {year}
+  {1984})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Thomsen}\ \emph {et~al.}(1986)\citenamefont
+  {Thomsen}, \citenamefont {Grahn}, \citenamefont {Maris},\ and\ \citenamefont
+  {Tauc}}]{thomsenPRB86}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.~H.}\ \bibnamefont
+  {Thomsen}}, \bibinfo {author} {\bibfnamefont {H.~T.}\ \bibnamefont {Grahn}},
+  \bibinfo {author} {\bibfnamefont {H.~J.}\ \bibnamefont {Maris}}, \ and\
+  \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Tauc}},\ }\href
+  {https://journals.aps.org/prb/abstract/10.1103/ PhysRevB.34.4129} {\bibfield
+  {journal} {\bibinfo  {journal} {Phys. Rev. B}\ }\textbf {\bibinfo {volume}
+  {34}},\ \bibinfo {pages} {4129} (\bibinfo {year} {1986})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Grahn}\ \emph {et~al.}(1989)\citenamefont {Grahn},
+  \citenamefont {Maris},\ and\ \citenamefont {Tauc}}]{grahnJQE89}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.~T.}\ \bibnamefont
+  {Grahn}}, \bibinfo {author} {\bibfnamefont {H.~J.}\ \bibnamefont {Maris}}, \
+  and\ \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Tauc}},\ }\href
+  {\doibase 10.1109/3.40643} {\bibfield  {journal} {\bibinfo  {journal} {IEEE
+  J. Quant. Electron.}\ }\textbf {\bibinfo {volume} {25}},\ \bibinfo {pages}
+  {2562} (\bibinfo {year} {1989})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Lin}\ \emph {et~al.}(1991)\citenamefont {Lin},
+  \citenamefont {Stoner}, \citenamefont {Maris},\ and\ \citenamefont
+  {Tauc}}]{linJAP91}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.-N.}\ \bibnamefont
+  {Lin}}, \bibinfo {author} {\bibfnamefont {R.~J.}\ \bibnamefont {Stoner}},
+  \bibinfo {author} {\bibfnamefont {H.~J.}\ \bibnamefont {Maris}}, \ and\
+  \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Tauc}},\ }\href {\doibase
+  10.1063/1.348958} {\bibfield  {journal} {\bibinfo  {journal} {J. Appl.
+  Phys.}\ }\textbf {\bibinfo {volume} {69}},\ \bibinfo {pages} {3816} (\bibinfo
+  {year} {1991})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Pfeifer}\ \emph {et~al.}(1992)\citenamefont
+  {Pfeifer}, \citenamefont {K{\"u}tt}, \citenamefont {Kurz},\ and\
+  \citenamefont {Scholz}}]{pfeiferPRL92}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {T.}~\bibnamefont
+  {Pfeifer}}, \bibinfo {author} {\bibfnamefont {W.}~\bibnamefont {K{\"u}tt}},
+  \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont {Kurz}}, \ and\ \bibinfo
+  {author} {\bibfnamefont {R.}~\bibnamefont {Scholz}},\ }\href
+  {https://journals.aps.org/prl/abstract/10.1103/ PhysRevLett.69.3248}
+  {\bibfield  {journal} {\bibinfo  {journal} {Phys. Rev. Lett.}\ }\textbf
+  {\bibinfo {volume} {69}},\ \bibinfo {pages} {3248} (\bibinfo {year}
+  {1992})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Lim}\ \emph {et~al.}(2003)\citenamefont {Lim},
+  \citenamefont {Averitt}, \citenamefont {Demsar}, \citenamefont {Taylor},
+  \citenamefont {Hur},\ and\ \citenamefont {Cheong}}]{limAPL03}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.}~\bibnamefont
+  {Lim}}, \bibinfo {author} {\bibfnamefont {R.~D.}\ \bibnamefont {Averitt}},
+  \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Demsar}}, \bibinfo
+  {author} {\bibfnamefont {A.~J.}\ \bibnamefont {Taylor}}, \bibinfo {author}
+  {\bibfnamefont {N.}~\bibnamefont {Hur}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {S.~W.}\ \bibnamefont {Cheong}},\ }\href {\doibase
+  10.1063/1.1630847} {\bibfield  {journal} {\bibinfo  {journal} {Appl. Phys.
+  Lett.}\ }\textbf {\bibinfo {volume} {83}},\ \bibinfo {pages} {4800} (\bibinfo
+  {year} {2003})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Bozovic}\ \emph {et~al.}(2004)\citenamefont
+  {Bozovic}, \citenamefont {Schneider}, \citenamefont {Xu}, \citenamefont
+  {Sobolewski}, \citenamefont {Ren}, \citenamefont {L{\"u}pke}, \citenamefont
+  {Demsar}, \citenamefont {Taylor},\ and\ \citenamefont
+  {Onellion}}]{bozovicPRB04}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {I.}~\bibnamefont
+  {Bozovic}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Schneider}},
+  \bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont {Xu}}, \bibinfo {author}
+  {\bibfnamefont {R.}~\bibnamefont {Sobolewski}}, \bibinfo {author}
+  {\bibfnamefont {Y.~H.}\ \bibnamefont {Ren}}, \bibinfo {author} {\bibfnamefont
+  {G.}~\bibnamefont {L{\"u}pke}}, \bibinfo {author} {\bibfnamefont
+  {J.}~\bibnamefont {Demsar}}, \bibinfo {author} {\bibfnamefont {A.~J.}\
+  \bibnamefont {Taylor}}, \ and\ \bibinfo {author} {\bibfnamefont
+  {M.}~\bibnamefont {Onellion}},\ }\href {\doibase 10.1103/PhysRevB.69.132503}
+  {\bibfield  {journal} {\bibinfo  {journal} {Phys. Rev. B}\ }\textbf {\bibinfo
+  {volume} {69}},\ \bibinfo {pages} {132503} (\bibinfo {year}
+  {2004})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Matsuda}\ \emph {et~al.}(2004)\citenamefont
+  {Matsuda}, \citenamefont {Wright}, \citenamefont {Hurley}, \citenamefont
+  {Gusev},\ and\ \citenamefont {Shimizu}}]{matsudaPRL04}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {O.}~\bibnamefont
+  {Matsuda}}, \bibinfo {author} {\bibfnamefont {O.~B.}\ \bibnamefont {Wright}},
+  \bibinfo {author} {\bibfnamefont {D.~H.}\ \bibnamefont {Hurley}}, \bibinfo
+  {author} {\bibfnamefont {V.~E.}\ \bibnamefont {Gusev}}, \ and\ \bibinfo
+  {author} {\bibfnamefont {K.}~\bibnamefont {Shimizu}},\ }\href {\doibase
+  10.1103/PhysRevLett.93.095501} {\bibfield  {journal} {\bibinfo  {journal}
+  {Phys. Rev. Lett.}\ }\textbf {\bibinfo {volume} {93}},\ \bibinfo {pages}
+  {095501} (\bibinfo {year} {2004})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Rossignol}\ \emph {et~al.}(2005)\citenamefont
+  {Rossignol}, \citenamefont {Rampnoux}, \citenamefont {Perton}, \citenamefont
+  {Audoin},\ and\ \citenamefont {Dilhaire}}]{rossignolPRL05}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.}~\bibnamefont
+  {Rossignol}}, \bibinfo {author} {\bibfnamefont {J.~M.}\ \bibnamefont
+  {Rampnoux}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Perton}},
+  \bibinfo {author} {\bibfnamefont {B.}~\bibnamefont {Audoin}}, \ and\ \bibinfo
+  {author} {\bibfnamefont {S.}~\bibnamefont {Dilhaire}},\ }\href {\doibase
+  10.1103/PhysRevLett.94.166106} {\bibfield  {journal} {\bibinfo  {journal}
+  {Phys. Rev. Lett.}\ }\textbf {\bibinfo {volume} {94}},\ \bibinfo {pages}
+  {166106} (\bibinfo {year} {2005})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Park}\ \emph {et~al.}(2005)\citenamefont {Park},
+  \citenamefont {Wang}, \citenamefont {Nie}, \citenamefont {Clinite},\ and\
+  \citenamefont {Cao}}]{parkPRB05}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.}~\bibnamefont
+  {Park}}, \bibinfo {author} {\bibfnamefont {X.}~\bibnamefont {Wang}}, \bibinfo
+  {author} {\bibfnamefont {S.}~\bibnamefont {Nie}}, \bibinfo {author}
+  {\bibfnamefont {R.}~\bibnamefont {Clinite}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {J.}~\bibnamefont {Cao}},\ }\href {\doibase
+  10.1103/PhysRevB.72.100301} {\bibfield  {journal} {\bibinfo  {journal} {Phys.
+  Rev. B}\ }\textbf {\bibinfo {volume} {72}},\ \bibinfo {pages} {100301(R)}
+  (\bibinfo {year} {2005})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Wu}\ \emph {et~al.}(2006)\citenamefont {Wu},
+  \citenamefont {Geiser}, \citenamefont {Jun}, \citenamefont {Karpinski},
+  \citenamefont {Park},\ and\ \citenamefont {Sobolewski}}]{wuAPL06}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
+  {Wu}}, \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont {Geiser}}, \bibinfo
+  {author} {\bibfnamefont {J.}~\bibnamefont {Jun}}, \bibinfo {author}
+  {\bibfnamefont {J.}~\bibnamefont {Karpinski}}, \bibinfo {author}
+  {\bibfnamefont {J.-R.}\ \bibnamefont {Park}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {R.}~\bibnamefont {Sobolewski}},\ }\href {\doibase
+  10.1063/1.2168246} {\bibfield  {journal} {\bibinfo  {journal} {Appl. Phys.
+  Lett.}\ }\textbf {\bibinfo {volume} {88}},\ \bibinfo {pages} {041917}
+  (\bibinfo {year} {2006})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Miller}\ \emph {et~al.}(2006)\citenamefont {Miller},
+  \citenamefont {Qi}, \citenamefont {Xu}, \citenamefont {Cho}, \citenamefont
+  {Liu}, \citenamefont {Furdyna}, \citenamefont {Perakis}, \citenamefont
+  {Shahbazyan},\ and\ \citenamefont {Tolk}}]{millerPRB06}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~K.}\ \bibnamefont
+  {Miller}}, \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Qi}}, \bibinfo
+  {author} {\bibfnamefont {Y.}~\bibnamefont {Xu}}, \bibinfo {author}
+  {\bibfnamefont {Y.-J.}\ \bibnamefont {Cho}}, \bibinfo {author} {\bibfnamefont
+  {X.}~\bibnamefont {Liu}}, \bibinfo {author} {\bibfnamefont {J.~K.}\
+  \bibnamefont {Furdyna}}, \bibinfo {author} {\bibfnamefont {I.}~\bibnamefont
+  {Perakis}}, \bibinfo {author} {\bibfnamefont {T.~V.}\ \bibnamefont
+  {Shahbazyan}}, \ and\ \bibinfo {author} {\bibfnamefont {N.~H.}\ \bibnamefont
+  {Tolk}},\ }\href {\doibase 10.1103/PhysRevB.74.113313} {\bibfield  {journal}
+  {\bibinfo  {journal} {Phys. Rev. B}\ }\textbf {\bibinfo {volume} {74}},\
+  \bibinfo {pages} {113313} (\bibinfo {year} {2006})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Wen}\ \emph {et~al.}(2007)\citenamefont {Wen},
+  \citenamefont {Chou}, \citenamefont {Lin}, \citenamefont {Gusev},
+  \citenamefont {Lin},\ and\ \citenamefont {Sun}}]{wenAPL07}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Y.-C.}\ \bibnamefont
+  {Wen}}, \bibinfo {author} {\bibfnamefont {L.-C.}\ \bibnamefont {Chou}},
+  \bibinfo {author} {\bibfnamefont {H.-H.}\ \bibnamefont {Lin}}, \bibinfo
+  {author} {\bibfnamefont {V.}~\bibnamefont {Gusev}}, \bibinfo {author}
+  {\bibfnamefont {K.-H.}\ \bibnamefont {Lin}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {C.-K.}\ \bibnamefont {Sun}},\ }\href {\doibase
+  10.1063/1.2731441} {\bibfield  {journal} {\bibinfo  {journal} {Appl. Phys.
+  Lett.}\ }\textbf {\bibinfo {volume} {90}},\ \bibinfo {pages} {172102}
+  (\bibinfo {year} {2007})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Xu}\ \emph {et~al.}(2008)\citenamefont {Xu},
+  \citenamefont {Qi}, \citenamefont {Miller}, \citenamefont {Cho},
+  \citenamefont {Liu}, \citenamefont {Furdyna}, \citenamefont {Shahbazyan},\
+  and\ \citenamefont {Tolk}}]{xuPSSC08}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont
+  {Xu}}, \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Qi}}, \bibinfo
+  {author} {\bibfnamefont {J.}~\bibnamefont {Miller}}, \bibinfo {author}
+  {\bibfnamefont {Y.-J.}\ \bibnamefont {Cho}}, \bibinfo {author} {\bibfnamefont
+  {X.}~\bibnamefont {Liu}}, \bibinfo {author} {\bibfnamefont {J.~K.}\
+  \bibnamefont {Furdyna}}, \bibinfo {author} {\bibfnamefont {T.~V.}\
+  \bibnamefont {Shahbazyan}}, \ and\ \bibinfo {author} {\bibfnamefont {N.~H.}\
+  \bibnamefont {Tolk}},\ }\href {\doibase 10.1002/pssc.200779117} {\bibfield
+  {journal} {\bibinfo  {journal} {Phys. Status Solidi B}\ }\textbf {\bibinfo
+  {volume} {5}},\ \bibinfo {pages} {2632} (\bibinfo {year} {2008})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Hudert}\ \emph {et~al.}(2008)\citenamefont {Hudert},
+  \citenamefont {Bartels}, \citenamefont {Dekorsy},\ and\ \citenamefont
+  {K{\"o}hler}}]{hudertJAP08}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {F.}~\bibnamefont
+  {Hudert}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Bartels}},
+  \bibinfo {author} {\bibfnamefont {T.}~\bibnamefont {Dekorsy}}, \ and\
+  \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont {K{\"o}hler}},\ }\href
+  {\doibase 10.1063/1.3033140} {\bibfield  {journal} {\bibinfo  {journal} {J.
+  Appl. Phys.}\ }\textbf {\bibinfo {volume} {104}},\ \bibinfo {pages} {123509}
+  (\bibinfo {year} {2008})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Ruello}\ \emph {et~al.}(2009)\citenamefont {Ruello},
+  \citenamefont {Zhang}, \citenamefont {Laffez}, \citenamefont {Perrin},\ and\
+  \citenamefont {Gusev}}]{ruelloPRB09}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.}~\bibnamefont
+  {Ruello}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Zhang}},
+  \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont {Laffez}}, \bibinfo
+  {author} {\bibfnamefont {B.}~\bibnamefont {Perrin}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {V.}~\bibnamefont {Gusev}},\ }\href {\doibase
+  10.1103/PhysRevB.79.094303} {\bibfield  {journal} {\bibinfo  {journal} {Phys.
+  Rev. B}\ }\textbf {\bibinfo {volume} {79}},\ \bibinfo {pages} {094303}
+  (\bibinfo {year} {2009})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Babilotte}\ \emph {et~al.}(2010)\citenamefont
+  {Babilotte}, \citenamefont {Ruello}, \citenamefont {Mounier}, \citenamefont
+  {Pezeril}, \citenamefont {Vaudel}, \citenamefont {Edely}, \citenamefont
+  {Breteau}, \citenamefont {Gusev},\ and\ \citenamefont
+  {Blary}}]{babilottePRB10}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.}~\bibnamefont
+  {Babilotte}}, \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont {Ruello}},
+  \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont {Mounier}}, \bibinfo
+  {author} {\bibfnamefont {T.}~\bibnamefont {Pezeril}}, \bibinfo {author}
+  {\bibfnamefont {G.}~\bibnamefont {Vaudel}}, \bibinfo {author} {\bibfnamefont
+  {M.}~\bibnamefont {Edely}}, \bibinfo {author} {\bibfnamefont {J.-M.}\
+  \bibnamefont {Breteau}}, \bibinfo {author} {\bibfnamefont {V.}~\bibnamefont
+  {Gusev}}, \ and\ \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
+  {Blary}},\ }\href {\doibase 10.1103/PhysRevB.81.245207} {\bibfield  {journal}
+  {\bibinfo  {journal} {Phys. Rev. B}\ }\textbf {\bibinfo {volume} {81}},\
+  \bibinfo {pages} {245207} (\bibinfo {year} {2010})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Ruello}\ \emph {et~al.}(2012)\citenamefont {Ruello},
+  \citenamefont {Pezeril}, \citenamefont {Avanesyan}, \citenamefont {Vaudel},
+  \citenamefont {Gusev}, \citenamefont {Infante},\ and\ \citenamefont
+  {Dkhil}}]{ruelloAPL12}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.}~\bibnamefont
+  {Ruello}}, \bibinfo {author} {\bibfnamefont {T.}~\bibnamefont {Pezeril}},
+  \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Avanesyan}}, \bibinfo
+  {author} {\bibfnamefont {G.}~\bibnamefont {Vaudel}}, \bibinfo {author}
+  {\bibfnamefont {V.}~\bibnamefont {Gusev}}, \bibinfo {author} {\bibfnamefont
+  {I.~C.}\ \bibnamefont {Infante}}, \ and\ \bibinfo {author} {\bibfnamefont
+  {B.}~\bibnamefont {Dkhil}},\ }\href {\doibase 10.1063/1.4719069} {\bibfield
+  {journal} {\bibinfo  {journal} {Appl. Phys. Lett.}\ }\textbf {\bibinfo
+  {volume} {100}},\ \bibinfo {pages} {212906} (\bibinfo {year}
+  {2012})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Chen}\ \emph {et~al.}(2012)\citenamefont {Chen},
+  \citenamefont {Yang}, \citenamefont {Luo}, \citenamefont {Laing},
+  \citenamefont {Wu}, \citenamefont {Lin}, \citenamefont {Uen}, \citenamefont
+  {Juang}, \citenamefont {Chu},\ and\ \citenamefont {Kobayashi}}]{chenAPL12}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {L.~Y.}\ \bibnamefont
+  {Chen}}, \bibinfo {author} {\bibfnamefont {J.~C.}\ \bibnamefont {Yang}},
+  \bibinfo {author} {\bibfnamefont {C.~W.}\ \bibnamefont {Luo}}, \bibinfo
+  {author} {\bibfnamefont {C.~W.}\ \bibnamefont {Laing}}, \bibinfo {author}
+  {\bibfnamefont {K.~H.}\ \bibnamefont {Wu}}, \bibinfo {author} {\bibfnamefont
+  {J.-Y.}\ \bibnamefont {Lin}}, \bibinfo {author} {\bibfnamefont {T.~M.}\
+  \bibnamefont {Uen}}, \bibinfo {author} {\bibfnamefont {J.~Y.}\ \bibnamefont
+  {Juang}}, \bibinfo {author} {\bibfnamefont {Y.~H.}\ \bibnamefont {Chu}}, \
+  and\ \bibinfo {author} {\bibfnamefont {T.}~\bibnamefont {Kobayashi}},\ }\href
+  {\doibase 10.1063/1.4734512} {\bibfield  {journal} {\bibinfo  {journal}
+  {Appl. Phys. Lett.}\ }\textbf {\bibinfo {volume} {101}},\ \bibinfo {pages}
+  {041902} (\bibinfo {year} {2012})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Gusev}\ \emph {et~al.}(2011)\citenamefont {Gusev},
+  \citenamefont {Lomonosov}, \citenamefont {Ruello}, \citenamefont {Ayouch},\
+  and\ \citenamefont {Vaudel}}]{gusevJAP11}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {V.}~\bibnamefont
+  {Gusev}}, \bibinfo {author} {\bibfnamefont {A.~M.}\ \bibnamefont
+  {Lomonosov}}, \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont {Ruello}},
+  \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Ayouch}}, \ and\ \bibinfo
+  {author} {\bibfnamefont {G.}~\bibnamefont {Vaudel}},\ }\href {\doibase
+  10.1063/1.3665646} {\bibfield  {journal} {\bibinfo  {journal} {J. Appl.
+  Phys.}\ }\textbf {\bibinfo {volume} {110}},\ \bibinfo {pages} {124908}
+  (\bibinfo {year} {2011})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Matsuda}\ and\ \citenamefont
+  {Wright}(2002)}]{matsudaJOSAB02}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {O.}~\bibnamefont
+  {Matsuda}}\ and\ \bibinfo {author} {\bibfnamefont {O.~B.}\ \bibnamefont
+  {Wright}},\ }\href {\doibase 10.1364/JOSAB.19.003028} {\bibfield  {journal}
+  {\bibinfo  {journal} {J. Opt. Soc. Am. B}\ }\textbf {\bibinfo {volume}
+  {19}},\ \bibinfo {pages} {3028} (\bibinfo {year} {2002})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Grahn}\ \emph
+  {et~al.}(1988{\natexlab{a}})\citenamefont {Grahn}, \citenamefont {Young},
+  \citenamefont {Maris}, \citenamefont {Tauc}, \citenamefont {Hong},\ and\
+  \citenamefont {Smith}}]{grahnAPL88a}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.~T.}\ \bibnamefont
+  {Grahn}}, \bibinfo {author} {\bibfnamefont {D.~A.}\ \bibnamefont {Young}},
+  \bibinfo {author} {\bibfnamefont {H.~J.}\ \bibnamefont {Maris}}, \bibinfo
+  {author} {\bibfnamefont {J.}~\bibnamefont {Tauc}}, \bibinfo {author}
+  {\bibfnamefont {J.~M.}\ \bibnamefont {Hong}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {T.~P.}\ \bibnamefont {Smith}},\ }\href {\doibase
+  10.1063/1.100309} {\bibfield  {journal} {\bibinfo  {journal} {Appl. Phys.
+  Lett.}\ }\textbf {\bibinfo {volume} {53}},\ \bibinfo {pages} {2023} (\bibinfo
+  {year} {1988}{\natexlab{a}})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Grahn}\ \emph
+  {et~al.}(1988{\natexlab{b}})\citenamefont {Grahn}, \citenamefont {Maris},
+  \citenamefont {Tauc},\ and\ \citenamefont {Hatton}}]{grahnAPL88b}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.~T.}\ \bibnamefont
+  {Grahn}}, \bibinfo {author} {\bibfnamefont {H.~J.}\ \bibnamefont {Maris}},
+  \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Tauc}}, \ and\ \bibinfo
+  {author} {\bibfnamefont {K.~S.}\ \bibnamefont {Hatton}},\ }\href {\doibase
+  10.1063/1.100253} {\bibfield  {journal} {\bibinfo  {journal} {Appl. Phys.
+  Lett.}\ }\textbf {\bibinfo {volume} {53}},\ \bibinfo {pages} {2281} (\bibinfo
+  {year} {1988}{\natexlab{b}})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Tanei}\ \emph {et~al.}(2008)\citenamefont {Tanei},
+  \citenamefont {Nakamura}, \citenamefont {Ogi}, \citenamefont {Hirao},\ and\
+  \citenamefont {Ikeda}}]{taneiPRL08}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.}~\bibnamefont
+  {Tanei}}, \bibinfo {author} {\bibfnamefont {N.}~\bibnamefont {Nakamura}},
+  \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont {Ogi}}, \bibinfo {author}
+  {\bibfnamefont {M.}~\bibnamefont {Hirao}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {R.}~\bibnamefont {Ikeda}},\ }\href {\doibase
+  10.1103/PhysRevLett.100.016804} {\bibfield  {journal} {\bibinfo  {journal}
+  {Phys. Rev. Lett.}\ }\textbf {\bibinfo {volume} {100}},\ \bibinfo {pages}
+  {016804} (\bibinfo {year} {2008})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Qi}\ \emph {et~al.}(2010)\citenamefont {Qi},
+  \citenamefont {Yan}, \citenamefont {Park}, \citenamefont {Steigerwald},
+  \citenamefont {Xu}, \citenamefont {Gilbert}, \citenamefont {Liu},
+  \citenamefont {Furdyna}, \citenamefont {Pantelides},\ and\ \citenamefont
+  {Tolk}}]{qiPRB10}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+  {Qi}}, \bibinfo {author} {\bibfnamefont {J.~A.}\ \bibnamefont {Yan}},
+  \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont {Park}}, \bibinfo {author}
+  {\bibfnamefont {A.}~\bibnamefont {Steigerwald}}, \bibinfo {author}
+  {\bibfnamefont {Y.}~\bibnamefont {Xu}}, \bibinfo {author} {\bibfnamefont
+  {S.~N.}\ \bibnamefont {Gilbert}}, \bibinfo {author} {\bibfnamefont
+  {X.}~\bibnamefont {Liu}}, \bibinfo {author} {\bibfnamefont {J.~K.}\
+  \bibnamefont {Furdyna}}, \bibinfo {author} {\bibfnamefont {S.~T.}\
+  \bibnamefont {Pantelides}}, \ and\ \bibinfo {author} {\bibfnamefont {N.~H.}\
+  \bibnamefont {Tolk}},\ }\href {\doibase 10.1103/PhysRevB.81.115208}
+  {\bibfield  {journal} {\bibinfo  {journal} {Phys. Rev. B}\ }\textbf {\bibinfo
+  {volume} {81}},\ \bibinfo {pages} {115208} (\bibinfo {year}
+  {2010})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Zhu}\ \emph {et~al.}(1991)\citenamefont {Zhu},
+  \citenamefont {Maris},\ and\ \citenamefont {Tauc}}]{zhuPRB91}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {T.~C.}\ \bibnamefont
+  {Zhu}}, \bibinfo {author} {\bibfnamefont {H.~J.}\ \bibnamefont {Maris}}, \
+  and\ \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Tauc}},\ }\href
+  {https://journals.aps.org/prb/abstract/10.1103/ PhysRevB.44.4281} {\bibfield
+  {journal} {\bibinfo  {journal} {Phys. Rev. B}\ }\textbf {\bibinfo {volume}
+  {44}},\ \bibinfo {pages} {4281} (\bibinfo {year} {1991})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Daly}\ \emph {et~al.}(2009)\citenamefont {Daly},
+  \citenamefont {Kang}, \citenamefont {Wang},\ and\ \citenamefont
+  {Cahill}}]{dalyPRB09}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {B.~C.}\ \bibnamefont
+  {Daly}}, \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont {Kang}}, \bibinfo
+  {author} {\bibfnamefont {Y.}~\bibnamefont {Wang}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {D.~G.}\ \bibnamefont {Cahill}},\ }\href {\doibase
+  10.1103/PhysRevB.80.174112} {\bibfield  {journal} {\bibinfo  {journal} {Phys.
+  Rev. B}\ }\textbf {\bibinfo {volume} {80}},\ \bibinfo {pages} {174112}
+  (\bibinfo {year} {2009})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Tas}\ \emph {et~al.}(1998)\citenamefont {Tas},
+  \citenamefont {Loomis}, \citenamefont {Maris}, \citenamefont {Bailes},\ and\
+  \citenamefont {Seiberling}}]{tasAPL98}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {G.}~\bibnamefont
+  {Tas}}, \bibinfo {author} {\bibfnamefont {J.~J.}\ \bibnamefont {Loomis}},
+  \bibinfo {author} {\bibfnamefont {H.~J.}\ \bibnamefont {Maris}}, \bibinfo
+  {author} {\bibfnamefont {A.~A.}\ \bibnamefont {Bailes}}, \ and\ \bibinfo
+  {author} {\bibfnamefont {L.~E.}\ \bibnamefont {Seiberling}},\ }\href
+  {\doibase 10.1063/1.121276} {\bibfield  {journal} {\bibinfo  {journal} {Appl.
+  Phys. Lett.}\ }\textbf {\bibinfo {volume} {72}},\ \bibinfo {pages} {2235}
+  (\bibinfo {year} {1998})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Steigerwald}\ \emph {et~al.}(2012)\citenamefont
+  {Steigerwald}, \citenamefont {Hmelo}, \citenamefont {Varga}, \citenamefont
+  {Feldman},\ and\ \citenamefont {Tolk}}]{steigerwaldJAP12}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Steigerwald}}, \bibinfo {author} {\bibfnamefont {A.~B.}\ \bibnamefont
+  {Hmelo}}, \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont {Varga}},
+  \bibinfo {author} {\bibfnamefont {L.~C.}\ \bibnamefont {Feldman}}, \ and\
+  \bibinfo {author} {\bibfnamefont {N.~H.}\ \bibnamefont {Tolk}},\ }\href
+  {\doibase 10.1063/1.4732072} {\bibfield  {journal} {\bibinfo  {journal} {J.
+  Appl. Phys.}\ }\textbf {\bibinfo {volume} {112}},\ \bibinfo {pages} {013514}
+  (\bibinfo {year} {2012})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Steigerwald}\ \emph {et~al.}(2009)\citenamefont
+  {Steigerwald}, \citenamefont {Xu}, \citenamefont {Qi}, \citenamefont
+  {Gregory}, \citenamefont {Liu}, \citenamefont {Furdyna}, \citenamefont
+  {Varga}, \citenamefont {Hmelo}, \citenamefont {L{\"u}pke}, \citenamefont
+  {Feldman},\ and\ \citenamefont {Tolk}}]{steigerwaldAPL09}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Steigerwald}}, \bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont {Xu}},
+  \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Qi}}, \bibinfo {author}
+  {\bibfnamefont {J.}~\bibnamefont {Gregory}}, \bibinfo {author} {\bibfnamefont
+  {X.}~\bibnamefont {Liu}}, \bibinfo {author} {\bibfnamefont {J.~K.}\
+  \bibnamefont {Furdyna}}, \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
+  {Varga}}, \bibinfo {author} {\bibfnamefont {A.~B.}\ \bibnamefont {Hmelo}},
+  \bibinfo {author} {\bibfnamefont {G.}~\bibnamefont {L{\"u}pke}}, \bibinfo
+  {author} {\bibfnamefont {L.~C.}\ \bibnamefont {Feldman}}, \ and\ \bibinfo
+  {author} {\bibfnamefont {N.~H.}\ \bibnamefont {Tolk}},\ }\href {\doibase
+  10.1063/1.3099341} {\bibfield  {journal} {\bibinfo  {journal} {Appl. Phys.
+  Lett.}\ }\textbf {\bibinfo {volume} {94}},\ \bibinfo {pages} {111910}
+  (\bibinfo {year} {2009})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Gregory}\ \emph {et~al.}(2012)\citenamefont
+  {Gregory}, \citenamefont {Steigerwald}, \citenamefont {Takahashi},
+  \citenamefont {Hmelo},\ and\ \citenamefont {Tolk}}]{gregoryAPL12}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+  {Gregory}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Steigerwald}}, \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont
+  {Takahashi}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Hmelo}}, \
+  and\ \bibinfo {author} {\bibfnamefont {N.~H.}\ \bibnamefont {Tolk}},\ }\href
+  {\doibase 10.1063/1.4765647} {\bibfield  {journal} {\bibinfo  {journal}
+  {Appl. Phys. Lett.}\ }\textbf {\bibinfo {volume} {101}},\ \bibinfo {pages}
+  {181904} (\bibinfo {year} {2012})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Baydin}\ \emph {et~al.}(2016)\citenamefont {Baydin},
+  \citenamefont {Krzyzanowska}, \citenamefont {Dhanunjaya}, \citenamefont
+  {Nageswara~Rao}, \citenamefont {Davidson}, \citenamefont {Feldman},\ and\
+  \citenamefont {Tolk}}]{baydinAPLP16}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Baydin}}, \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont
+  {Krzyzanowska}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Dhanunjaya}}, \bibinfo {author} {\bibfnamefont {S.~V.~S.}\ \bibnamefont
+  {Nageswara~Rao}}, \bibinfo {author} {\bibfnamefont {J.~L.}\ \bibnamefont
+  {Davidson}}, \bibinfo {author} {\bibfnamefont {L.~C.}\ \bibnamefont
+  {Feldman}}, \ and\ \bibinfo {author} {\bibfnamefont {N.~H.}\ \bibnamefont
+  {Tolk}},\ }\href {\doibase 10.1063/1.4945443} {\bibfield  {journal} {\bibinfo
+   {journal} {APL Photonics}\ }\textbf {\bibinfo {volume} {1}},\ \bibinfo
+  {pages} {036102} (\bibinfo {year} {2016})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Mounier}\ \emph {et~al.}(2008)\citenamefont
+  {Mounier}, \citenamefont {Morozov}, \citenamefont {Ruello}, \citenamefont
+  {Breteau}, \citenamefont {Picart},\ and\ \citenamefont
+  {Gusev}}]{mounierEPJST08}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.}~\bibnamefont
+  {Mounier}}, \bibinfo {author} {\bibfnamefont {E.}~\bibnamefont {Morozov}},
+  \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont {Ruello}}, \bibinfo
+  {author} {\bibfnamefont {J.-M.}\ \bibnamefont {Breteau}}, \bibinfo {author}
+  {\bibfnamefont {P.}~\bibnamefont {Picart}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {V.}~\bibnamefont {Gusev}},\ }\href {\doibase
+  10.1140/epjst/e2008-00436-2} {\bibfield  {journal} {\bibinfo  {journal} {Eur.
+  Phys. J. Spec. Top.}\ }\textbf {\bibinfo {volume} {153}},\ \bibinfo {pages}
+  {243} (\bibinfo {year} {2008})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Mounier}\ \emph {et~al.}(2010)\citenamefont
+  {Mounier}, \citenamefont {Picart}, \citenamefont {Babilotte}, \citenamefont
+  {Ruello}, \citenamefont {Breteau}, \citenamefont {P{\'e}zeril}, \citenamefont
+  {Vaudel}, \citenamefont {Kouyat{\'e}},\ and\ \citenamefont
+  {Gusev}}]{mounierOE10}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.}~\bibnamefont
+  {Mounier}}, \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont {Picart}},
+  \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont {Babilotte}}, \bibinfo
+  {author} {\bibfnamefont {P.}~\bibnamefont {Ruello}}, \bibinfo {author}
+  {\bibfnamefont {J.-M.}\ \bibnamefont {Breteau}}, \bibinfo {author}
+  {\bibfnamefont {T.}~\bibnamefont {P{\'e}zeril}}, \bibinfo {author}
+  {\bibfnamefont {G.}~\bibnamefont {Vaudel}}, \bibinfo {author} {\bibfnamefont
+  {M.}~\bibnamefont {Kouyat{\'e}}}, \ and\ \bibinfo {author} {\bibfnamefont
+  {V.}~\bibnamefont {Gusev}},\ }\href
+  {https://www.osapublishing.org/abstract.cfm?uri=oe-18-7- 6767} {\bibfield
+  {journal} {\bibinfo  {journal} {Opt. Express}\ }\textbf {\bibinfo {volume}
+  {18}},\ \bibinfo {pages} {6767} (\bibinfo {year} {2010})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Lin}\ \emph {et~al.}(2016)\citenamefont {Lin},
+  \citenamefont {Shen}, \citenamefont {Liu}, \citenamefont {Lu}, \citenamefont
+  {Chen}, \citenamefont {Chang}, \citenamefont {Lee}, \citenamefont {Hong},
+  \citenamefont {Kwo}, \citenamefont {Hsu},\ and\ \citenamefont
+  {Hsieh}}]{linJPD16}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.-H.}\ \bibnamefont
+  {Lin}}, \bibinfo {author} {\bibfnamefont {Y.-K.}\ \bibnamefont {Shen}},
+  \bibinfo {author} {\bibfnamefont {W.-R.}\ \bibnamefont {Liu}}, \bibinfo
+  {author} {\bibfnamefont {C.-H.}\ \bibnamefont {Lu}}, \bibinfo {author}
+  {\bibfnamefont {Y.-H.}\ \bibnamefont {Chen}}, \bibinfo {author}
+  {\bibfnamefont {C.}~\bibnamefont {Chang}}, \bibinfo {author} {\bibfnamefont
+  {W.-C.}\ \bibnamefont {Lee}}, \bibinfo {author} {\bibfnamefont
+  {M.}~\bibnamefont {Hong}}, \bibinfo {author} {\bibfnamefont {J.-R.}\
+  \bibnamefont {Kwo}}, \bibinfo {author} {\bibfnamefont {C.-H.}\ \bibnamefont
+  {Hsu}}, \ and\ \bibinfo {author} {\bibfnamefont {W.-F.}\ \bibnamefont
+  {Hsieh}},\ }\href {\doibase 10.1088/0022-3727/49/32/325102} {\bibfield
+  {journal} {\bibinfo  {journal} {J. Phys. D: Appl. Phys.}\ }\textbf {\bibinfo
+  {volume} {49}},\ \bibinfo {pages} {325102} (\bibinfo {year}
+  {2016})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {He}\ \emph {et~al.}(2017)\citenamefont {He},
+  \citenamefont {Ristow}, \citenamefont {Grossmann}, \citenamefont {Brick},
+  \citenamefont {Guo}, \citenamefont {Schubert}, \citenamefont {Hettich},
+  \citenamefont {Gusev},\ and\ \citenamefont {Dekorsy}}]{hePRB17}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.}~\bibnamefont
+  {He}}, \bibinfo {author} {\bibfnamefont {O.}~\bibnamefont {Ristow}}, \bibinfo
+  {author} {\bibfnamefont {M.}~\bibnamefont {Grossmann}}, \bibinfo {author}
+  {\bibfnamefont {D.}~\bibnamefont {Brick}}, \bibinfo {author} {\bibfnamefont
+  {Y.}~\bibnamefont {Guo}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Schubert}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Hettich}},
+  \bibinfo {author} {\bibfnamefont {V.}~\bibnamefont {Gusev}}, \ and\ \bibinfo
+  {author} {\bibfnamefont {T.}~\bibnamefont {Dekorsy}},\ }\href {\doibase
+  10.1103/PhysRevB.95.184302} {\bibfield  {journal} {\bibinfo  {journal} {Phys.
+  Rev. B}\ }\textbf {\bibinfo {volume} {95}},\ \bibinfo {pages} {184302}
+  (\bibinfo {year} {2017})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Linnik}\ \emph {et~al.}(2017)\citenamefont {Linnik},
+  \citenamefont {Kats}, \citenamefont {J{\"a}ger}, \citenamefont {Salasyuk},
+  \citenamefont {Yakovlev}, \citenamefont {Rushforth}, \citenamefont {Akimov},
+  \citenamefont {Kalashnikova}, \citenamefont {Bayer},\ and\ \citenamefont
+  {Scherbakov}}]{linnikPS17}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {T.~L.}\ \bibnamefont
+  {Linnik}}, \bibinfo {author} {\bibfnamefont {V.~N.}\ \bibnamefont {Kats}},
+  \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {J{\"a}ger}}, \bibinfo
+  {author} {\bibfnamefont {A.~S.}\ \bibnamefont {Salasyuk}}, \bibinfo {author}
+  {\bibfnamefont {D.~R.}\ \bibnamefont {Yakovlev}}, \bibinfo {author}
+  {\bibfnamefont {A.~W.}\ \bibnamefont {Rushforth}}, \bibinfo {author}
+  {\bibfnamefont {A.~V.}\ \bibnamefont {Akimov}}, \bibinfo {author}
+  {\bibfnamefont {A.~M.}\ \bibnamefont {Kalashnikova}}, \bibinfo {author}
+  {\bibfnamefont {M.}~\bibnamefont {Bayer}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {A.~V.}\ \bibnamefont {Scherbakov}},\ }\href {\doibase
+  10.1088/1402-4896/aa6943} {\bibfield  {journal} {\bibinfo  {journal} {Physica
+  Scripta}\ }\textbf {\bibinfo {volume} {92}},\ \bibinfo {pages} {054006}
+  (\bibinfo {year} {2017})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Baldini}\ \emph {et~al.}(2018)\citenamefont
+  {Baldini}, \citenamefont {Palmieri}, \citenamefont {Dominguez}, \citenamefont
+  {Ruello}, \citenamefont {Rubio},\ and\ \citenamefont
+  {Chergui}}]{baldiniNL18}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.}~\bibnamefont
+  {Baldini}}, \bibinfo {author} {\bibfnamefont {T.}~\bibnamefont {Palmieri}},
+  \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Dominguez}}, \bibinfo
+  {author} {\bibfnamefont {P.}~\bibnamefont {Ruello}}, \bibinfo {author}
+  {\bibfnamefont {A.}~\bibnamefont {Rubio}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {M.}~\bibnamefont {Chergui}},\ }\href {\doibase
+  10.1021/acs.nanolett.8b01837} {\bibfield  {journal} {\bibinfo  {journal}
+  {Nano Lett.}\ }\textbf {\bibinfo {volume} {18}},\ \bibinfo {pages} {5007}
+  (\bibinfo {year} {2018})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Greener}\ \emph {et~al.}(2018)\citenamefont
+  {Greener}, \citenamefont {Akimov}, \citenamefont {Gusev}, \citenamefont
+  {Kudrynskyi}, \citenamefont {Beton}, \citenamefont {Kovalyuk}, \citenamefont
+  {Taniguchi}, \citenamefont {Watanabe}, \citenamefont {Kent},\ and\
+  \citenamefont {Patan{\`e}}}]{greenerPRB18}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~D.~G.}\
+  \bibnamefont {Greener}}, \bibinfo {author} {\bibfnamefont {A.~V.}\
+  \bibnamefont {Akimov}}, \bibinfo {author} {\bibfnamefont {V.~E.}\
+  \bibnamefont {Gusev}}, \bibinfo {author} {\bibfnamefont {Z.~R.}\ \bibnamefont
+  {Kudrynskyi}}, \bibinfo {author} {\bibfnamefont {P.~H.}\ \bibnamefont
+  {Beton}}, \bibinfo {author} {\bibfnamefont {Z.~D.}\ \bibnamefont {Kovalyuk}},
+  \bibinfo {author} {\bibfnamefont {T.}~\bibnamefont {Taniguchi}}, \bibinfo
+  {author} {\bibfnamefont {K.}~\bibnamefont {Watanabe}}, \bibinfo {author}
+  {\bibfnamefont {A.~J.}\ \bibnamefont {Kent}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {A.}~\bibnamefont {Patan{\`e}}},\ }\href {\doibase
+  10.1103/PhysRevB.98.075408} {\bibfield  {journal} {\bibinfo  {journal} {Phys.
+  Rev. B}\ }\textbf {\bibinfo {volume} {98}},\ \bibinfo {pages} {075408}
+  (\bibinfo {year} {2018})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Anderson}\ \emph {et~al.}(2018)\citenamefont
+  {Anderson}, \citenamefont {Mendoza},\ and\ \citenamefont
+  {Carriles}}]{andersonPSSB18}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.~M.}\ \bibnamefont
+  {Anderson}}, \bibinfo {author} {\bibfnamefont {B.~S.}\ \bibnamefont
+  {Mendoza}}, \ and\ \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
+  {Carriles}},\ }\href {\doibase 10.1002/pssb.201700487} {\bibfield  {journal}
+  {\bibinfo  {journal} {Phys. Status Solidi B}\ }\textbf {\bibinfo {volume}
+  {255}},\ \bibinfo {pages} {1700487} (\bibinfo {year} {2018})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Wu}\ \emph {et~al.}(2007)\citenamefont {Wu},
+  \citenamefont {Geiser}, \citenamefont {Jun}, \citenamefont {Karpinski},\ and\
+  \citenamefont {Sobolewski}}]{wuPRB07}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
+  {Wu}}, \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont {Geiser}}, \bibinfo
+  {author} {\bibfnamefont {J.}~\bibnamefont {Jun}}, \bibinfo {author}
+  {\bibfnamefont {J.}~\bibnamefont {Karpinski}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {R.}~\bibnamefont {Sobolewski}},\ }\href {\doibase
+  10.1103/PhysRevB.76.085210} {\bibfield  {journal} {\bibinfo  {journal} {Phys.
+  Rev. B}\ }\textbf {\bibinfo {volume} {76}},\ \bibinfo {pages} {085210}
+  (\bibinfo {year} {2007}),\ 10.1103/PhysRevB.76.085210}\BibitemShut {NoStop}%
+\bibitem [{sis()}]{sisound}%
+  \BibitemOpen
+  in\ \href {\doibase 10.1007/10551045_210} {\emph {\bibinfo {booktitle} {Group
+  {IV} Elements, {IV}-{IV} and {III}-{V} Compounds. Part a - Lattice
+  Properties}}}\ (\bibinfo  {publisher} {Springer-Verlag})\ pp.\ \bibinfo
+  {pages} {1--7}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Hopcroft}\ \emph {et~al.}(2010)\citenamefont
+  {Hopcroft}, \citenamefont {Nix},\ and\ \citenamefont
+  {Kenny}}]{hopcroftJMS10}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.~A.}\ \bibnamefont
+  {Hopcroft}}, \bibinfo {author} {\bibfnamefont {W.~D.}\ \bibnamefont {Nix}}, \
+  and\ \bibinfo {author} {\bibfnamefont {T.~W.}\ \bibnamefont {Kenny}},\ }\href
+  {\doibase 10.1109/jmems.2009.2039697} {\bibfield  {journal} {\bibinfo
+  {journal} {J. Microelectromech. Syst.}\ }\textbf {\bibinfo {volume} {19}},\
+  \bibinfo {pages} {229} (\bibinfo {year} {2010})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Lundstrom}(2000)}]{lundstrom2000}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Lundstrom}},\ }\href@noop {} {\emph {\bibinfo {title} {Fundamentals of
+  Carrier Transport}}}\ (\bibinfo  {publisher} {Cambridge University Press},\
+  \bibinfo {year} {2000})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Landolt}\ \emph {et~al.}(1984)\citenamefont
+  {Landolt}, \citenamefont {B{\"o}rnstein}, \citenamefont {Hellwege},
+  \citenamefont {Goodenough}, \citenamefont {Schulz}, \citenamefont {Weiss},\
+  and\ \citenamefont {Madelung}}]{landolt}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.}~\bibnamefont
+  {Landolt}}, \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
+  {B{\"o}rnstein}}, \bibinfo {author} {\bibfnamefont {K.~H.}\ \bibnamefont
+  {Hellwege}}, \bibinfo {author} {\bibfnamefont {J.~B.}\ \bibnamefont
+  {Goodenough}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Schulz}},
+  \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont {Weiss}}, \ and\ \bibinfo
+  {author} {\bibfnamefont {O.}~\bibnamefont {Madelung}},\ }\href@noop {} {\emph
+  {\bibinfo {title} {Numerical data and functional relationships in science and
+  technology}}},\ \bibinfo {series} {New Series: Group III, Crystal and Solid
+  State Physics}, Vol.\ \bibinfo {volume} {17, Semiconductors}\ (\bibinfo
+  {publisher} {Springer},\ \bibinfo {address} {Berlin},\ \bibinfo {year}
+  {1984})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Del~Sole}(1995)}]{delsolechap95}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
+  {Del~Sole}},\ }in\ \href {\doibase 10.1016/b978-0-444-82198-0.50011-4} {\emph
+  {\bibinfo {booktitle} {Photonic Probes of Surfaces}}},\ \bibinfo {series and
+  number} {\bibinfo {series} {Electromagnetic waves}\ No.~\bibinfo {number}
+  {2}},\ \bibinfo {editor} {edited by\ \bibinfo {editor} {\bibfnamefont
+  {P.}~\bibnamefont {Halevi}}}\ (\bibinfo  {publisher} {Elsevier},\ \bibinfo
+  {address} {Amsterdam; New York},\ \bibinfo {year} {1995})\ pp.\ \bibinfo
+  {pages} {131--174}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Tancogne-Dejean}\ \emph {et~al.}(2014)\citenamefont
+  {Tancogne-Dejean}, \citenamefont {Mendoza},\ and\ \citenamefont
+  {V{\'e}niard}}]{tancognePRB14}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {N.}~\bibnamefont
+  {Tancogne-Dejean}}, \bibinfo {author} {\bibfnamefont {B.~S.}\ \bibnamefont
+  {Mendoza}}, \ and\ \bibinfo {author} {\bibfnamefont {V.}~\bibnamefont
+  {V{\'e}niard}},\ }\href {\doibase 10.1103/PhysRevB.90.035212} {\bibfield
+  {journal} {\bibinfo  {journal} {Phys. Rev. B}\ }\textbf {\bibinfo {volume}
+  {90}},\ \bibinfo {pages} {035212} (\bibinfo {year} {2014})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Tancogne-Dejean}\ \emph {et~al.}(2015)\citenamefont
+  {Tancogne-Dejean}, \citenamefont {Giorgetti},\ and\ \citenamefont
+  {V{\'e}niard}}]{tancognePRB15}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {N.}~\bibnamefont
+  {Tancogne-Dejean}}, \bibinfo {author} {\bibfnamefont {C.}~\bibnamefont
+  {Giorgetti}}, \ and\ \bibinfo {author} {\bibfnamefont {V.}~\bibnamefont
+  {V{\'e}niard}},\ }\href {\doibase 10.1103/PhysRevB.92.245308} {\bibfield
+  {journal} {\bibinfo  {journal} {Phys. Rev. B}\ }\textbf {\bibinfo {volume}
+  {92}},\ \bibinfo {pages} {245308} (\bibinfo {year} {2015})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Gonze}\ \emph {et~al.}(2009)\citenamefont {Gonze},
+  \citenamefont {Amadon}, \citenamefont {Anglade}, \citenamefont {Beuken},
+  \citenamefont {Bottin}, \citenamefont {Boulanger}, \citenamefont {Bruneval},
+  \citenamefont {Caliste}, \citenamefont {Caracas}, \citenamefont
+  {C{\^{o}}t{\'{e}}}, \citenamefont {Deutsch}, \citenamefont {Genovese},
+  \citenamefont {Ghosez}, \citenamefont {Giantomassi}, \citenamefont
+  {Goedecker}, \citenamefont {Hamann}, \citenamefont {Hermet}, \citenamefont
+  {Jollet}, \citenamefont {Jomard}, \citenamefont {Leroux}, \citenamefont
+  {Mancini}, \citenamefont {Mazevet}, \citenamefont {Oliveira}, \citenamefont
+  {Onida}, \citenamefont {Pouillon}, \citenamefont {Rangel}, \citenamefont
+  {Rignanese}, \citenamefont {Sangalli}, \citenamefont {Shaltaf}, \citenamefont
+  {Torrent}, \citenamefont {Verstraete}, \citenamefont {Zerah},\ and\
+  \citenamefont {Zwanziger}}]{gonzeCPS09}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {X.}~\bibnamefont
+  {Gonze}}, \bibinfo {author} {\bibfnamefont {B.}~\bibnamefont {Amadon}},
+  \bibinfo {author} {\bibfnamefont {P.-M.}\ \bibnamefont {Anglade}}, \bibinfo
+  {author} {\bibfnamefont {J.-M.}\ \bibnamefont {Beuken}}, \bibinfo {author}
+  {\bibfnamefont {F.}~\bibnamefont {Bottin}}, \bibinfo {author} {\bibfnamefont
+  {P.}~\bibnamefont {Boulanger}}, \bibinfo {author} {\bibfnamefont
+  {F.}~\bibnamefont {Bruneval}}, \bibinfo {author} {\bibfnamefont
+  {D.}~\bibnamefont {Caliste}}, \bibinfo {author} {\bibfnamefont
+  {R.}~\bibnamefont {Caracas}}, \bibinfo {author} {\bibfnamefont
+  {M.}~\bibnamefont {C{\^{o}}t{\'{e}}}}, \bibinfo {author} {\bibfnamefont
+  {T.}~\bibnamefont {Deutsch}}, \bibinfo {author} {\bibfnamefont
+  {L.}~\bibnamefont {Genovese}}, \bibinfo {author} {\bibfnamefont
+  {P.}~\bibnamefont {Ghosez}}, \bibinfo {author} {\bibfnamefont
+  {M.}~\bibnamefont {Giantomassi}}, \bibinfo {author} {\bibfnamefont
+  {S.}~\bibnamefont {Goedecker}}, \bibinfo {author} {\bibfnamefont {D.~R.}\
+  \bibnamefont {Hamann}}, \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont
+  {Hermet}}, \bibinfo {author} {\bibfnamefont {F.}~\bibnamefont {Jollet}},
+  \bibinfo {author} {\bibfnamefont {G.}~\bibnamefont {Jomard}}, \bibinfo
+  {author} {\bibfnamefont {S.}~\bibnamefont {Leroux}}, \bibinfo {author}
+  {\bibfnamefont {M.}~\bibnamefont {Mancini}}, \bibinfo {author} {\bibfnamefont
+  {S.}~\bibnamefont {Mazevet}}, \bibinfo {author} {\bibfnamefont {M.~J.~T.}\
+  \bibnamefont {Oliveira}}, \bibinfo {author} {\bibfnamefont {G.}~\bibnamefont
+  {Onida}}, \bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont {Pouillon}},
+  \bibinfo {author} {\bibfnamefont {T.}~\bibnamefont {Rangel}}, \bibinfo
+  {author} {\bibfnamefont {G.-M.}\ \bibnamefont {Rignanese}}, \bibinfo {author}
+  {\bibfnamefont {D.}~\bibnamefont {Sangalli}}, \bibinfo {author}
+  {\bibfnamefont {R.}~\bibnamefont {Shaltaf}}, \bibinfo {author} {\bibfnamefont
+  {M.}~\bibnamefont {Torrent}}, \bibinfo {author} {\bibfnamefont {M.~J.}\
+  \bibnamefont {Verstraete}}, \bibinfo {author} {\bibfnamefont
+  {G.}~\bibnamefont {Zerah}}, \ and\ \bibinfo {author} {\bibfnamefont {J.~W.}\
+  \bibnamefont {Zwanziger}},\ }\href {\doibase 10.1016/j.cpc.2009.07.007}
+  {\bibfield  {journal} {\bibinfo  {journal} {Comp. Phys. Commun.}\ }\textbf
+  {\bibinfo {volume} {180}},\ \bibinfo {pages} {2582} (\bibinfo {year}
+  {2009})}\BibitemShut {NoStop}%
+\bibitem [{abi()}]{abinit}%
+  \BibitemOpen
+  \href@noop {} {}\bibinfo {note} {The ABINIT code is a common project of the
+  Universit{\'e} Catholique de Louvain, Corning Incorporated, and other
+  contributors (URL http://www.abinit.org).}\BibitemShut {Stop}%
+\bibitem [{\citenamefont {Troullier}\ and\ \citenamefont
+  {Martins}(1991)}]{troullierPRB91}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {N.}~\bibnamefont
+  {Troullier}}\ and\ \bibinfo {author} {\bibfnamefont {J.~L.}\ \bibnamefont
+  {Martins}},\ }\href {\doibase 10.1103/PhysRevB.43.1993} {\bibfield  {journal}
+  {\bibinfo  {journal} {Phys. Rev. B}\ }\textbf {\bibinfo {volume} {43}},\
+  \bibinfo {pages} {1993} (\bibinfo {year} {1991})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Mendoza}\ \emph {et~al.}()\citenamefont {Mendoza},
+  \citenamefont {Anderson}, \citenamefont {Cabellos},\ and\ \citenamefont
+  {Rangel}}]{tiniba}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {B.~S.}\ \bibnamefont
+  {Mendoza}}, \bibinfo {author} {\bibfnamefont {S.~M.}\ \bibnamefont
+  {Anderson}}, \bibinfo {author} {\bibfnamefont {J.~L.}\ \bibnamefont
+  {Cabellos}}, \ and\ \bibinfo {author} {\bibfnamefont {T.}~\bibnamefont
+  {Rangel}},\ }\href@noop {} {\enquote {\bibinfo {title} {{TINIBA}: \emph{Ab
+  initio} calculation of the optical properties of solids, surfaces,
+  interfaces, and {2D} materials},}\ }\bibinfo {note} {INDAUTOR-Mexico No.
+  03-2009-120114033400-01}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Li}\ and\ \citenamefont {Galli}(2010)}]{liPRB10}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont
+  {Li}}\ and\ \bibinfo {author} {\bibfnamefont {G.}~\bibnamefont {Galli}},\
+  }\href {\doibase 10.1103/PhysRevB.82.045321} {\bibfield  {journal} {\bibinfo
+  {journal} {Phys. Rev. B}\ }\textbf {\bibinfo {volume} {82}},\ \bibinfo
+  {pages} {045321} (\bibinfo {year} {2010})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Anderson}\ \emph {et~al.}(2015)\citenamefont
+  {Anderson}, \citenamefont {Tancogne-Dejean}, \citenamefont {Mendoza},\ and\
+  \citenamefont {V{\'e}niard}}]{andersonPRB15}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.~M.}\ \bibnamefont
+  {Anderson}}, \bibinfo {author} {\bibfnamefont {N.}~\bibnamefont
+  {Tancogne-Dejean}}, \bibinfo {author} {\bibfnamefont {B.~S.}\ \bibnamefont
+  {Mendoza}}, \ and\ \bibinfo {author} {\bibfnamefont {V.}~\bibnamefont
+  {V{\'e}niard}},\ }\href {\doibase 10.1103/PhysRevB.91.075302} {\bibfield
+  {journal} {\bibinfo  {journal} {Phys. Rev. B}\ }\textbf {\bibinfo {volume}
+  {91}},\ \bibinfo {pages} {075302} (\bibinfo {year} {2015})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Olevano}\ \emph {et~al.}()\citenamefont {Olevano},
+  \citenamefont {Reining},\ and\ \citenamefont {Sottile}}]{olevanoDP}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {V.}~\bibnamefont
+  {Olevano}}, \bibinfo {author} {\bibfnamefont {L.}~\bibnamefont {Reining}}, \
+  and\ \bibinfo {author} {\bibfnamefont {F.}~\bibnamefont {Sottile}},\
+  }\href@noop {} {}\bibinfo {note} {\url{http://dp-code.org}}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Reining}\ \emph {et~al.}()\citenamefont {Reining},
+  \citenamefont {Olevano}, \citenamefont {Sottile}, \citenamefont {Albrecht},\
+  and\ \citenamefont {Onida}}]{reiningEXC}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {L.}~\bibnamefont
+  {Reining}}, \bibinfo {author} {\bibfnamefont {V.}~\bibnamefont {Olevano}},
+  \bibinfo {author} {\bibfnamefont {F.}~\bibnamefont {Sottile}}, \bibinfo
+  {author} {\bibfnamefont {S.}~\bibnamefont {Albrecht}}, \ and\ \bibinfo
+  {author} {\bibfnamefont {G.}~\bibnamefont {Onida}},\ }\href@noop {}
+  {}\bibinfo {howpublished} {\url{http://www.bethe-salpeter.org}}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Cuffe}\ \emph {et~al.}(2013)\citenamefont {Cuffe},
+  \citenamefont {Ristow}, \citenamefont {Ch{\'a}vez}, \citenamefont
+  {Shchepetov}, \citenamefont {Chapuis}, \citenamefont {Alzina}, \citenamefont
+  {Hettich}, \citenamefont {Prunnila}, \citenamefont {Ahopelto}, \citenamefont
+  {Dekorsy},\ and\ \citenamefont {Sotomayor~Torres}}]{cuffePRL13}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+  {Cuffe}}, \bibinfo {author} {\bibfnamefont {O.}~\bibnamefont {Ristow}},
+  \bibinfo {author} {\bibfnamefont {E.}~\bibnamefont {Ch{\'a}vez}}, \bibinfo
+  {author} {\bibfnamefont {A.}~\bibnamefont {Shchepetov}}, \bibinfo {author}
+  {\bibfnamefont {P.-O.}\ \bibnamefont {Chapuis}}, \bibinfo {author}
+  {\bibfnamefont {F.}~\bibnamefont {Alzina}}, \bibinfo {author} {\bibfnamefont
+  {M.}~\bibnamefont {Hettich}}, \bibinfo {author} {\bibfnamefont
+  {M.}~\bibnamefont {Prunnila}}, \bibinfo {author} {\bibfnamefont
+  {J.}~\bibnamefont {Ahopelto}}, \bibinfo {author} {\bibfnamefont
+  {T.}~\bibnamefont {Dekorsy}}, \ and\ \bibinfo {author} {\bibfnamefont
+  {C.~M.}\ \bibnamefont {Sotomayor~Torres}},\ }\href {\doibase
+  10.1103/PhysRevLett.110.095503} {\bibfield  {journal} {\bibinfo  {journal}
+  {Phys. Rev. Lett.}\ }\textbf {\bibinfo {volume} {110}},\ \bibinfo {pages}
+  {095503} (\bibinfo {year} {2013})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Lawler}\ \emph {et~al.}(2014)\citenamefont {Lawler},
+  \citenamefont {Steigerwald}, \citenamefont {Gregory}, \citenamefont
+  {Krzyzanowska},\ and\ \citenamefont {Tolk}}]{lawlerMRE14}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.~M.}\ \bibnamefont
+  {Lawler}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Steigerwald}},
+  \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Gregory}}, \bibinfo
+  {author} {\bibfnamefont {H.}~\bibnamefont {Krzyzanowska}}, \ and\ \bibinfo
+  {author} {\bibfnamefont {N.~H.}\ \bibnamefont {Tolk}},\ }\href {\doibase
+  10.1088/2053-1591/1/2/025701} {\bibfield  {journal} {\bibinfo  {journal}
+  {Mater. Res. Express}\ }\textbf {\bibinfo {volume} {1}},\ \bibinfo {pages}
+  {025701} (\bibinfo {year} {2014})}\BibitemShut {NoStop}%
+\end{thebibliography}%
+
+
+\end{document}

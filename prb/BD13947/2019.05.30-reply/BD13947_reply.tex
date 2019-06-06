@@ -1,0 +1,98 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{framed}
+\usepackage{color}
+\usepackage{parskip}
+\usepackage{fullpage}
+
+\usepackage[backref,colorlinks,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+
+\definecolor{shadecolor}{rgb}{0.757, 0.882, 0.925}
+
+\begin{document}
+
+\noindent Dr. Yan Li\hfill{\today}\\
+Associate Editor\\
+Physical Review B\\
+
+\noindent Dear Dr. Li,
+
+Attached is the revised version of our paper entitled \emph{Ab initio modeling
+of optical functions after strain wave perturbation for defect detection},
+manuscript BD13947/Anderson. We hope that we have resolved the very valid point
+of the first reviewer, and that our manuscript is now acceptable for publication
+in Physical Review B.
+
+\noindent Best regards,
+
+\noindent Dr. Sean M. Anderson\\
+\href{mailto:sma@cio.mx}{sma@cio.mx}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Second Report of the First Referee -- BD13947/Anderson}
+
+In the revised version of the manuscript, the authors have addressed my most
+important worry about their approach (I am the first referee) by making an
+explicit connection to the time evolution of the signal in Fig. 4. The new
+material about the electron density around the defect level is a welcome
+addition to the manuscript and should help the reader visualize the system.
+Besides the following minor point, I recommend that the manuscript is accepted
+for publication in Phys. Rev. B.
+
+Both the second referee and I raised the issue of the different scissors shifts
+used for surface and bulk susceptibilities. Most importantly, the authors notes
+in their reply that the exact value used has a negligible influence on the final
+results. However, they have not modified the manuscript to explain better the
+values used (except to clarify that 3.4eV is the experimental ``direct'' optical
+gap, as I requested, corresponding to the E1 critical point in the JDOS), and
+any reader with familiarity with DFT calculations of silicon would have a
+reaction similar to ours. Having looked at the references cited by Referee 2, as
+well as the authors' previous publications on the system, I have to say I cannot
+remotely understand where they obtain the value of 0.98 eV for bulk Si from. To
+quote:
+
+``a scissors shift of 0.98 eV was used for the bulk calculation in order to
+adjust the theoretical band gap to the experimental value of 3.4 eV for the
+direct band gap.''
+
+This implies the position of E1 in their DFT-LDA calculation was 2.4eV. This is
+far lower than any calculation I have seen in the literature. Or to put things
+differently, a bulk Si GW calculation yields shifts ranging from 0.7eV (Botti
+PRB 10.1103/PhysRevB.69.155112) to 0.95eV (Adolph PRB 10.1103/PhysRevB.53.9797).
+This yields spectra that overshoot the experimental spectra by a significant
+amount: hence Schmidt (PRB 10.1103/PhysRevB.61.7604) uses a 0.5eV shift to match
+with experiment, as the second referee notes. Li (Ref 59) even state
+``Self-energy corrections to surface states are larger in magnitude by 0.2--0.3
+eV than those to bulk states in the same energy range'', which would imply the
+bulk correction is smaller, not larger, than the surface correction of 0.7eV.
+
+Last, it is anyway odd/inconsistent to use a GW-computed value for the surface,
+and an empirical value for the bulk.
+
+I, therefore, urge the authors to rectify this matter, either in a resubmitted
+version or a footnote added at the proof stage. It does NOT preclude acceptance
+in Phys Rev. B, but in my opinion, it looks like an error that can easily be
+corrected.\\
+
+\begin{shaded*}
+Thank you for your shrewd and accurate remarks concerning our values for the
+scissors shift.
+
+We are in complete agreement that there is no justifiable reason to use a
+different value for the bulk. Therefore, we have recalculated every result
+presented in the manuscript using the same 0.7\,eV value for both surface and
+bulk susceptibilities. We have amended the phrase on page 3 (red text) to
+reflect this change.
+
+The trends of these new results (and our original conclusions), remain the same
+as in the previous version of the manuscript; however, there are some minor
+changes to Figs. 2--4 (in the new version of the manuscript) that reflect the
+new numerical values.
+
+We hope that with these corrections you can recommend acceptance in Phys.
+Rev. B.
+\end{shaded*}
+
+\end{document}

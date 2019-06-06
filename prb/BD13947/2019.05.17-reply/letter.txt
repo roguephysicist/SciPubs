@@ -1,0 +1,106 @@
+Re: BD13947
+    Ab initio modeling of optical functions after strain wave perturbation
+    for defect detection
+    by Sean M. Anderson, Bernardo S. Mendoza, and Ram\'on Carriles
+
+Dear Dr. Anderson,
+
+The above manuscript has been reviewed by two of our referees.
+Comments from the reports appear below for your consideration.
+
+When you resubmit your manuscript, please include a summary of the
+changes made and a brief response to all recommendations and
+criticisms.
+
+Yours sincerely,
+
+Yan Li
+Associate Editor
+Physical Review B
+Email: prb@aps.org
+https://journals.aps.org/prb/
+
+Opening for submissions soon, Physical Review Research is a new open
+access, multidisciplinary journal offering the Physical Review
+experience and quality you value and trust. Learn more and sign up for
+alerts.
+
+https://journals.aps.org/prresearch
+@PhysRevResearch on Twitter
+
+----------------------------------------------------------------------
+Report of the First Referee -- BD13947/Anderson
+----------------------------------------------------------------------
+
+Anderson, Mendoza, and Carriles present a first principles model of 
+strain wave propagation through a Si(111):H slab and study how the 
+linear optical reflectance changes as a result of a deep lying defect 
+layer below the surface. The idea is to simulate the results of 
+coherent phonon spectroscopy (CAP). The strain wave is modeled 
+analytically and the optical response (change in reflectance) is 
+computed in the independent particle picture. As both strain and light 
+penetrate deeply into semiconductor slabs, and the the strain profile 
+changes at each timestep, an ab initio approach is an ambitious 
+undertaking. Here the authors use a very thick slab of 150 A, which 
+forces them to use a 1x1 cell and thus consider a simple defect 
+represented by a displacement of one atomic layer. The authors 
+acknowledge this is an unrealistic situation to produce 
+experimentally, and while localized/point defects are beyond 
+treatment, their approach may work for buried interfaces, 
+dislocations, thin films, and so on. The paper is well written, the 
+figures are clear, the analysis of the obtained spectra is 
+interesting, and the approach, to my eyes, looks reasonable. I 
+recommend publication after the authors have considering the 
+following: 
+
+1. My main worry about the approach is that the final signal (fig 2 b) 
+clearly reveals a new peak related to the defect, but does not seem 
+sensitive enough to allow an experimentally measured defect position 
+to be inferred (the differences between the various profiles is very 
+small). The interesting change in reflectance with respect to the 
+defect depth (Fig 4a) is I suppose integrated into the main peak in 
+Fig 2b and thus the information is hidden. Is this correct? 
+
+2. The reason for the different scissors shifts for surface and bulk 
+is not clear to me. I suppose that for a slab as thick as the one used 
+here, the size quantization is minimal and the bulk states are well 
+represented. Also: 3.4eV refers to the direct gap, which should be 
+noted. 
+
+3. Can the authors explain the origin of the 2.8eV peak in terms of 
+some localized defect state, rather than some general bond length 
+argument? It may be useful to understand what kind of perturbation the 
+approach is sensitive to. 
+
+4. Note some typos: page 6 "present present" and "were we plot"
+
+----------------------------------------------------------------------
+Report of the Second Referee -- BD13947/Anderson
+----------------------------------------------------------------------
+
+The authors present an original and well-written theoretical 
+study on the influence of strain on surface optical properties. 
+The work extends early research by Hingerl and co-workers on the 
+influence of static strain [see, e.g., App. Surf. Sci. 175/176 
+(2001) 769-776] (which probably should be cited in this context) 
+to the dynamic range and points out an 
+interesting application, the detection of buried defect layers.
+
+The methodology is sound and the calculations are well done.
+There is one point I do not understand, however. The authors 
+write (page 3) "A scissors shift of 0.7 eV was used for the 
+surface susceptibility, obtained from G0W0 calculations [58]; 
+a scissors shift of 0.98 eV was used for the bulk calculation"
+A scissors shift 0.98 eV is in fact very large for DFT 
+calculations on silicon. In an previous calculation on the 
+optical response of Si(111):H [Phys. Rev. B 61, 7604 (2000)]
+a value of 0.5 eV was used. In Ref. [58] cited by the authors
+a difference of 0.68 eV was found for bulk DFT and G0W0 
+calculation. The authors should explain (i) how they arrived 
+at the values of 0.7 and 0.98 eV and (ii) how they apply these
+two different values to the calculation of the optical response.
+Do they weight the shift according to the surface-localization
+of the respective state?
+
+Once this clarified, I suppose the paper will be suitable for 
+publication.
