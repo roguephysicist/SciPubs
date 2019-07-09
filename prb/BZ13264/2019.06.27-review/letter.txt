@@ -1,0 +1,72 @@
+Re: BZ13264
+   Plasmon dispersion in graphite: A comparison of current ab initio
+   methods
+   by Sean M. Anderson, Bernardo S. Mendoza, Giorgia Fugallo, et al.
+
+Dear Dr. Anderson,
+
+The above manuscript has been reviewed by our referee. Acceptance of
+your paper for publication is likely, but we first ask you to consider
+carefully the appended comments.
+
+With your resubmittal, please include a summary of changes made and a
+brief response to all recommendations and criticisms.
+
+Yours sincerely,
+
+Jason T. Haraldsen
+Associate Editor
+Physical Review B
+Email: prb@aps.org
+https://journals.aps.org/prb/
+
+Physical Review Research is now open for submissions! As an
+introductory promotion APS is waiving publication charges for all
+articles received in 2019 and published in this new open access,
+multidisciplinary journal.
+
+https://journals.aps.org/prresearch
+@PhysRevResearch on Twitter
+
+----------------------------------------------------------------------
+Second Report of the First Referee -- BZ13264/Anderson
+----------------------------------------------------------------------
+
+In the revised version of their manuscript, Anderson and colleagues 
+have addressed in detail my technical criticisms (I am the first 
+referee) and the recommendations of the second reviewer. Regarding the 
+latter, I feel the changes are adequate. In the shortened paper the 
+motives are clearer and the text is more readable and easy to follow. 
+Regarding my own criticisms, it appears that my misgivings about 
+convergence were in fact due to use of incorrect data for q->0 in the 
+initial manuscript. I am happy to see that the new datasets yield the 
+correct quadratic dispersion. The authors have also provided a 
+convincing and demonstration of their convergence tests for RPA (being 
+a benchmark study, the authors may consider providing some of this 
+analysis in the expanded supplementary material). 
+
+Regarding the broadening, I accept their point that neglecting 
+coupling results in intensities twice as large than without, this is 
+clear. However, I still feel their comment 
+
+"Methods that include these (BSE CP, ALDA CP, and RPA CP) have a peak 
+intensity between 0.5 and 1, which compares favorably with experiment" 
+should be better qualified or restated: the calculations using a 
+smaller broadening in the convergence tests yield peaks of about 1.2 
+at q=0 (unfortunately, there is no comparison provided for q=0.21). I 
+don't mean to badger the authors on this - it only a small point - but 
+it remains unclear if the favorable agreement with experiment is due 
+to the somewhat arbitrary choice of broadening or not. 
+
+Note some spelling errors have crept in: dielctric, calcations 
+
+My main criticism of the work remains, however. It serves as a 
+benchmark paper whose conclusions may only be important for few 
+systems (semi metals?); there is little new physics. The authors 
+acknowledge that it would be nice to provide such a benchmark on a 
+newer system of interest, but rightfully note that such a study would 
+introduce difficult convergence issues and that for experimental 
+reasons, graphite is a perfect material to tackle. 
+
+In summary, my opinion is that the paper may be suitable for 
+publication in Physical Review.

@@ -1,0 +1,145 @@
+Re: BZ13264
+   Plasmon dispersion in graphite: A comparison of current ab initio
+   methods
+   by Sean M. Anderson, Bernardo S. Mendoza, Giorgia Fugallo, et al.
+
+Dear Dr. Anderson,
+
+The above manuscript has been reviewed by two of our referees.
+Comments from the reports appear below.
+
+These comments suggest that the present version of the manuscript is
+not suitable for publication in the Physical Review. However, if you
+can provide a convincing response to the criticism, we will give
+further consideration. Please accompany any resubmittal by a summary
+of the changes made and a brief response to all recommendations and
+criticisms.
+
+Yours sincerely,
+
+Jason T. Haraldsen
+Associate Editor
+Physical Review B
+Email: prb@aps.org
+https://journals.aps.org/prb/
+
+Meet the editors at the APS March Meeting in Boston
+https://www.aps.org/meetings/march/index.cfm   #apsmarch
+
+----------------------------------------------------------------------
+Report of the First Referee -- BZ13264/Anderson
+----------------------------------------------------------------------
+
+Anderson and colleagues present a theoretical study of the momentum 
+dependent EELS on graphite, comparing their results with published 
+experimental data. The work compares three methods, BSE, ALDA, and 
+RPA, assuming the same starting band structure, and investigates also 
+the effect of the neglect of coupling between positive and negative 
+energy e-h pairs (Tamm-Dancoff approximation). The main conclusions 
+are that in graphite BSE gives the best results and the coupling term 
+is important. The paper is clearly written, although somewhat 
+repetitive in parts and somewhat long considering many of the points 
+mentioned have been discussed in previous works and several similar 
+calculations have been reported elsewhere (the references given appear 
+adequate). 
+
+As the authors note, the work is a "systematic study" on a "benchmark 
+material". However, the conclusions drawn about coupling may be 
+relevant only for a semi-metal like graphite, a material which is of 
+limited interest nowadays in comparison to its 2D counterpart (the TDA 
+appears to work well in other materials like BN, for instance). It is 
+also disappointing that the authors do not discuss the different 
+plasmon dispersions, in particular, their BSE-CP data appears linear 
+(Fig. 4) instead of the measured parabolic behavior in q, while other 
+approximations appear to yield the correct dispersion. 
+
+Other specific points: 
+
+1. Both Ref 65 [Marinopoulos 2004, Fig 10] and Ref 51 [Liou, Fig 5c,d] 
+report EELS calculations on graphite within RPA and ALDA. The 
+agreement with experiment in those works is quite perfect. Instead, 
+the present work, with the same approximations, yields worse 
+agreement. 
+
+2. The author's data at q->0 seems out of step with the q>0 data, 
+clearly shown in Fig. 6, and in Fig. 4. This makes it harder to judge 
+the dispersion. Is there a problem of convergence, or of methodology? 
+Are the EELS peak positions determined from the eigenvalues or from 
+the broadened curves? 
+
+3. I am skeptical about the authors claims regarding the peak 
+intensity (IV A) comparison with experiment since their broadening is 
+very large (0.6eV); again, previous works found more reasonable 
+intensities within RPA and ALDA. These three points in fact suggest a 
+lack of convergence in the authors' calculations. While I appreciate 
+that BSE-CP is a very tough calculation, it is unfortunately a serious 
+point in a work whose main message requires a careful comparison of 
+different approaches. 
+
+In summary, although the paper has appeal as a reference work, I have 
+some doubts about the numerical convergence of some of the data, much 
+of the physics "message" has been published elsewhere, the novel 
+features are quite limited in scope being related mostly to 
+methodology.
+
+----------------------------------------------------------------------
+Report of the Second Referee -- BZ13264/Anderson
+----------------------------------------------------------------------
+
+The paper "Plasmon dispersion in graphite: A comparison of current ab
+initio methods" by Sean M. Anderson, Bernardo S. Mendoza, Giorgia
+Fugallo, and Francesco Sottile presents a comparison of different
+numerical methods to determine the dielectric function and EELS
+spectrum of a solid. The techniques are applied to the calculation of
+the plasmon spectrum of graphite and compared to experimental results
+obtained over the past several decades to serve as a benchmark for the
+use of these methods for future systems. The methods include TDDFT,
+adiabatic LDA (ALDA), RPA and the solution of the Bethe-Salpeter
+equation (BSE). They also compare the full method including
+interactions between excitons with the Tamm-Dancoff approximation.
+
+The article is a careful study of involved methods applied to a
+well-known system. As such, it is worth publishing as it may serve as
+a reference for calculations made on new materials. Overall the
+article is well written, but a few revisions are needed before the
+article can be accepted for publication in Physical Review B.
+
+1. The second half of the abstract should be more explicit about the
+results of the article (TD is not good, BSE good but time-consuming,
+etc.) Also, the abstract has the statements "We accurately discern"
+and "We accurately compare". What does "accurately" mean in this
+context? What does "discern" mean in this context?
+
+2. The introduction describes the methods and difficulties related to
+the calculation of optical spectra in solids. The paper then states
+that it compares these methods as they apply to graphite. There is not
+much new physics but the paper focuses on a comparison of methods.
+What is unclear in the introduction is if the authors were motivated
+to do their study by a present-day physical problem or system. Was the
+main interest only to compare different numerical methods? Or was it
+to study the plasmon spectrum of graphite? In short, the introduction
+should be more explicit about the underlying motivation. It would also
+have been desirable to apply the methods to a novel material that is
+presently under investigation.
+
+3. There is a typo on the left hand side of Eq. (8).
+
+4. When describing the results of Fig. 3, the authors state "however,
+the nature of the stretching causes a redistribution of the band
+energies, which causes changes in both the peak position and
+intensities." The statement should be qualified: is the redistribution
+improving or worsening the description of the EEL spectrum?
+
+5. In the description of Fig. 5 the authors compare their results with
+the "Zeppendfeld" and "Liou" data and state that they are closer to
+the former. What conclusion can be drawn from that observation?
+
+6. The figure captions should be more elaborate and self-explanatory.
+When reading them, one should be guided to the important features of
+the figure. For Figs. 6, 8, 9, 10 it would be useful to have a column
+label (either above or below the column) that specifies "with
+coupling" and "without coupling" (the authors will likely have a
+better keyword).
+
+Once the above points have been addressed, the paper can be
+recommended for publication.
